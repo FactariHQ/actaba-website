@@ -24,7 +24,7 @@ p_pages.intake_block = intake_live
 PAGES = [
   # key, path, fn, title, description, nav key
   ("home", "/", p_pages.home, "Adventure Child Therapy | ABA therapy for kids in Colorado & Oklahoma",
-   "Small, clinician-led ABA therapy for kids and families — in-home across the Denver metro, Grand Junction and Pueblo, and at our Tulsa center. No autism diagnosis needed to start in Colorado.", "home"),
+   "Small, clinician-led ABA therapy for kids and families — in-home across the Denver metro, Grand Junction, Pueblo and Ada, and at our Tulsa center. No autism diagnosis needed to start in Colorado.", "home"),
   ("families", "/families/", p_pages.families, "Getting started with ABA | Adventure Child Therapy",
    "What happens between your first call and your first session: state requirements, insurance and cost, what we ask of families, and the ACT intake form.", "families"),
   ("services", "/services/", p_pages.services, "ABA services | Adventure Child Therapy",
@@ -32,7 +32,7 @@ PAGES = [
   ("what-is-aba", "/what-is-aba/", p_pages.aba, "What is ABA? | Adventure Child Therapy",
    "Applied behavior analysis explained in plain language — what the science is, what a session looks like, and what we think is honest to promise.", "aba"),
   ("locations", "/locations/", p_pages.locations, "Locations | Adventure Child Therapy",
-   "In-home ABA across the Denver metro, Grand Junction and Pueblo, Colorado, and center-based and in-home ABA in Tulsa, Oklahoma.", "locations"),
+   "In-home ABA across the Denver metro, Grand Junction and Pueblo, Colorado; center-based and in-home ABA in Tulsa, Oklahoma; and in-home ABA in Ada, Oklahoma.", "locations"),
   ("providers", "/providers/", p_pro.providers, "Referral information for providers | Adventure Child Therapy",
    "For pediatricians, diagnosticians, school teams and case managers: documentation requirements by state, coverage, secure records, and the referral form.", "providers"),
   ("careers", "/careers/", p_pro.careers, "Careers | Adventure Child Therapy",
@@ -61,7 +61,7 @@ JSONLD = {
     {"@type": "MedicalOrganization", "@id": SITE + "/#org", "name": "Adventure Child Therapy", "alternateName": "ACT ABA",
      "url": SITE + "/", "logo": SITE + "/favicon.svg", "email": "info@actaba.com", "foundingDate": "2021",
      "medicalSpecialty": "Applied Behavior Analysis",
-     "areaServed": ["Denver metro, CO", "Grand Junction, CO", "Pueblo, CO", "Tulsa, OK"],
+     "areaServed": ["Denver metro, CO", "Grand Junction, CO", "Pueblo, CO", "Tulsa, OK", "Ada, OK"],
      "contactPoint": [
         {"@type": "ContactPoint", "telephone": "+1-720-432-8989", "contactType": "customer service", "areaServed": "US-CO"},
         {"@type": "ContactPoint", "telephone": "+1-918-764-8544", "contactType": "customer service", "areaServed": "US-OK"}]},
@@ -212,7 +212,7 @@ FOOTER = f'''<footer class="ftr">
         <p class="small" style="max-width:36ch">Small, clinician-led ABA for kids and families in Colorado and Oklahoma. Growing with families since 2021.</p>
       </div>
       <div class="stack g10"><h4>Families</h4><ul><li><a href="/families/">Getting started</a></li><li><a href="/services/">Services</a></li><li><a href="/what-is-aba/">What is ABA</a></li><li><a href="/families/#insurance">Insurance &amp; cost</a></li><li><a href="/families/#faq">Questions</a></li></ul></div>
-      <div class="stack g10"><h4>Locations</h4><ul><li><a href="/locations/#denver">Denver metro</a></li><li><a href="/locations/#grand-junction">Grand Junction</a></li><li><a href="/locations/#pueblo">Pueblo</a></li><li><a href="/locations/#tulsa">Tulsa Center</a></li><li><a href="/locations/#expanding">Where we’re headed</a></li></ul></div>
+      <div class="stack g10"><h4>Locations</h4><ul><li><a href="/locations/#denver">Denver metro</a></li><li><a href="/locations/#grand-junction">Grand Junction</a></li><li><a href="/locations/#pueblo">Pueblo</a></li><li><a href="/locations/#tulsa">Tulsa Center</a></li><li><a href="/locations/#ada">Ada</a></li><li><a href="/locations/#expanding">Where we’re headed</a></li></ul></div>
       <div class="stack g10"><h4>Work &amp; referrals</h4><ul><li><a href="/careers/">Open roles</a></li><li><a href="/providers/">Refer a family</a></li><li><a href="/about/">About us</a></li><li><a href="/contact/">Contact</a></li></ul></div>
     </div>
     <div class="ftr-btm">
