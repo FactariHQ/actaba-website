@@ -56,7 +56,7 @@ FAQ_CORE = [
   ("What will this cost us?",
    "If your child is enrolled in Health First Colorado or SoonerCare, there’s no cost to you for authorized services. If you have a commercial plan, we verify your benefits and tell you exactly what the plan said and when we checked. We won’t guess at a number just to have one to say."),
   ("Where do sessions happen?",
-   "In Colorado, almost always in your home — and in daycare, school or community settings when your child’s plan calls for it. In Tulsa, we have a center at 1217 East 48th Street, and we also see families in their homes."),
+   "In Colorado, almost always in your home — and in daycare, school or community settings when your child’s plan calls for it. In Tulsa, we have a center at 1217 East 48th Street, and we also see families in their homes. Around Ada, sessions happen in your home."),
   ("How many hours will my child get?",
    "That comes from the assessment and the authorization, not from a phone call. Hours are recommended by the BCBA who assessed your child and approved by your plan."),
   ("How long is the wait?",
@@ -133,10 +133,10 @@ def pillars():
 BENEFITS = [
   ("Paid time off and paid sick time", "Accrued, and actually usable."),
   ("Paid training", "Including Safety-Care (QBS) crisis-procedure certification."),
-  ("Certification reimbursement", "We reimburse RBT, BCaBA and BCBA exam costs with a commitment period — 6, 12 or 18 months by credential — agreed in writing before the money goes out."),
+  ("Certification reimbursement", "We reimburse RBT, BCaBA and BCBA exam costs."),
   ("Mileage reimbursement", "For Colorado in-home roles. Drive time isn’t paid hourly, and we tell you that on the first screening call rather than at the offer."),
   ("Professional development", "CEU support and a clear path from BT to RBT to Lead RBT to full-time and beyond."),
-  ("Schedules that fit the setting", "In Colorado, we build in-home schedules from your availability, with a target commute of 25 minutes or less. At our Tulsa center, you work set shifts with the team on site."),
+  ("Schedules that fit the setting", "In Colorado, we build in-home schedules from your availability, with a target commute of 30 minutes or less. At our Tulsa center, you work set shifts with the team on site."),
 ]
 
 LOCS = [
@@ -144,6 +144,7 @@ LOCS = [
   ("grand-junction", "m-gj", "Colorado", "Grand Junction", "In-home, daycare, school and community", None, "Mesas of the Western Slope"),
   ("pueblo", "m-pueblo", "Colorado", "Pueblo", "In-home and community", None, "A river valley in southern Colorado"),
   ("tulsa", "m-tulsa", "Oklahoma", "Tulsa Center", "Center-based and in-home", "1217 East 48th Street, Suite 101<br>Tulsa, OK 74105", "Our Tulsa center on the prairie"),
+  ("ada", "m-ada", "Oklahoma", "Ada", "In-home", None, "Rolling hills and oak trees around Ada, Oklahoma"),
 ]
 
 def field(inst, name, label, kind="input", typ="text", required=False, auto=None, options=None, placeholder="", hint=None, rows=4):
