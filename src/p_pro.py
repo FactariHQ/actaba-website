@@ -17,7 +17,7 @@ def providers():
     form = f'''<form class="act" data-form="referral" data-inst="{inst}" novalidate>
       <div class="f2">{field(inst,"ref_name","Your name",required=True,auto="name")}{field(inst,"ref_org","Practice or organization",required=True,auto="organization")}</div>
       <div class="f2">{field(inst,"ref_email","Email",typ="email",required=True,auto="email")}{field(inst,"ref_phone","Phone",typ="tel",auto="tel")}</div>
-      <div class="f2">{field(inst,"ref_role","Your role",kind="select",options=["Pediatrician / physician","Diagnosing psychologist","School or district team","Case manager","SLP / OT / PT","Other"])}{field(inst,"ref_region","Family’s area",kind="select",required=True,options=["Denver metro","Grand Junction / Western Slope","Pueblo / Southern Colorado","Tulsa","Elsewhere — tell us below"])}</div>
+      <div class="f2">{field(inst,"ref_role","Your role",kind="select",options=["Pediatrician / physician","Diagnosing psychologist","School or district team","Case manager","SLP / OT / PT","Other"])}{field(inst,"ref_region","Family’s area",kind="select",required=True,options=["Denver metro","Grand Junction / Western Slope","Pueblo / Southern Colorado","Tulsa","Ada","Elsewhere — tell us below"])}</div>
       <div class="f2">{field(inst,"ref_dx","Documentation",kind="select",required=True,options=["Physician letter recommending ABA (Colorado)","Diagnostic evaluation complete — report available","Evaluation in progress","Neither yet"])}{field(inst,"ref_payer","Payer",kind="select",options=["Health First Colorado","SoonerCare / SoonerSelect","Commercial","Unknown"])}</div>
       {field(inst,"ref_notes","Routing notes",kind="textarea",placeholder="Area, urgency, caregiver availability, and whether the family expects our call. Do not include protected health information — records are collected through a secure link.")}
       {consent(inst)}
@@ -28,7 +28,7 @@ def providers():
       ("Fax", '<span class="tnum">888-910-5088</span>'),
       ("Colorado", CO_TEL),
       ("Oklahoma", OK_TEL),
-      ("Service areas", "Denver metro, Grand Junction, Pueblo, Tulsa"),
+      ("Service areas", "Denver metro, Grand Junction, Pueblo, Tulsa, Ada"),
       ("Payers", "Health First Colorado, SoonerCare and SoonerSelect, commercial plans after verification"),
     ]
     return f'''<div data-route="providers" class="pro" data-title="For providers | Adventure Child Therapy" hidden>
@@ -49,7 +49,7 @@ def providers():
   {sec_head("Coverage", "Service areas and payers")}
   <div class="lead-list">
     <div><h4>Colorado</h4><p class="muted">Denver metro, Grand Junction and Pueblo. In-home and community-based services, including daycare and school settings where the treatment plan calls for it. Billed to Health First Colorado and commercial plans after benefit verification.</p></div>
-    <div><h4>Oklahoma</h4><p class="muted">Tulsa and Tulsa County. Center-based services at 1217 East 48th Street, Suite 101, plus in-home services. Billed to SoonerCare, SoonerSelect plans (Aetna Better Health of Oklahoma, Blue Cross and Blue Shield of Oklahoma, Oklahoma Complete Health, Humana Healthy Horizons) and commercial plans after benefit verification.</p></div>
+    <div><h4>Oklahoma</h4><p class="muted">Tulsa and Tulsa County: center-based services at 1217 East 48th Street, Suite 101, plus in-home services. Ada and nearby communities: in-home services. Billed to SoonerCare, SoonerSelect plans (Aetna Better Health of Oklahoma, Blue Cross and Blue Shield of Oklahoma, Oklahoma Complete Health, Humana Healthy Horizons) and commercial plans after benefit verification.</p></div>
     <div><h4>Outside these areas</h4><p class="muted">Please refer anyway and note the family’s location. We track unmet demand by ZIP code, and it informs where we open next, beginning with North Carolina.</p></div>
   </div>
 </div></section>
@@ -113,7 +113,7 @@ def careers():
     form = f'''<form class="act" data-form="careers" data-inst="{inst}" novalidate>
       <div class="f2">{field(inst,"app_name","Full name",required=True,auto="name")}{field(inst,"app_email","Email",typ="email",required=True,auto="email")}</div>
       <div class="f2">{field(inst,"app_phone","Phone",typ="tel",required=True,auto="tel")}{field(inst,"app_role","Position",kind="select",required=True,options=roles)}</div>
-      <div class="f2">{field(inst,"app_cert","Certification",kind="select",options=["RBT — active","BCaBA","BCBA","Not yet certified, willing to pursue","Other"])}{field(inst,"app_zip","Home ZIP code",required=True,auto="postal-code",hint="Colorado in-home cases are clustered to keep commutes near 25 minutes.")}</div>
+      <div class="f2">{field(inst,"app_cert","Certification",kind="select",options=["RBT — active","BCaBA","BCBA","Not yet certified, willing to pursue","Other"])}{field(inst,"app_zip","Home ZIP code",required=True,auto="postal-code",hint="Colorado in-home cases are clustered to keep commutes to 30 minutes or less.")}</div>
       {field(inst,"app_avail","Weekly availability",kind="textarea",required=True,rows=3,placeholder="Days and time blocks. Most sessions fall in the afternoon and 3–6pm. Minimum to hire: two days per week or 10–12 hours.")}
       {field(inst,"app_notes","Additional information",kind="textarea",rows=3)}
       {consent(inst)}
@@ -130,10 +130,10 @@ def careers():
     ben = "".join(f'<div class="card"><h4>{t}</h4><p class="small muted">{d}</p></div>' for t, d in [
       ("Paid time off and paid sick time", "Accrued and usable."),
       ("Paid training", "Including Safety-Care (QBS) crisis-procedure certification."),
-      ("Certification reimbursement", "RBT, BCaBA and BCBA exam costs reimbursed with a commitment period of 6, 12 or 18 months by credential, agreed in writing in advance."),
+      ("Certification reimbursement", "RBT, BCaBA and BCBA exam costs are reimbursed."),
       ("Mileage reimbursement", "For Colorado in-home roles. Drive time is not paid hourly, and we disclose this on the first screening call."),
       ("Professional development", "CEU support and a defined pathway from BT to RBT to Lead RBT and full-time roles."),
-      ("Scheduling by setting", "Colorado in-home schedules are built from your availability, with a target commute of 25 minutes or less. Tulsa center roles work set shifts on site."),
+      ("Scheduling by setting", "Colorado in-home schedules are built from your availability, with a target commute of 30 minutes or less. Tulsa center roles work set shifts on site."),
     ])
     return f'''<div data-route="careers" class="pro" data-title="Careers | Adventure Child Therapy" hidden>
 {phead_pro("Careers", "Clinical careers at Adventure Child Therapy", "Behavior technician, RBT and BCBA positions in Colorado and Oklahoma. Terms are stated plainly and differ by setting: Colorado in-home technicians are salaried full-time or hourly part-time, with schedules built from their availability; Tulsa center technicians are hourly and work set shifts at the center.", glance,
@@ -145,7 +145,7 @@ def careers():
   <div class="grid c3">
     <div class="card"><span class="k">Full-time</span><h3>Salaried, not hourly</h3><p class="small muted">Base pay is set against 23 billable hours per week, and every billable hour above that is paid in addition. Falling below 23 does not reduce your base, provided you maintain the availability agreed at hire.</p></div>
     <div class="card"><span class="k">Part-time</span><h3>Hourly, for direct service</h3><p class="small muted">Rate based on experience, certification and performance. Minimum to hire is two days per week, or 10–12 hours.</p></div>
-    <div class="card"><span class="k">Scheduling</span><h3>Built from your availability</h3><p class="small muted">We do not hire into fixed shifts. Cases are clustered by ZIP code with a target commute of 25 minutes or less, starting at 2–4 sessions per week and growing from there.</p></div>
+    <div class="card"><span class="k">Scheduling</span><h3>Built from your availability</h3><p class="small muted">We do not hire into fixed shifts. Cases are clustered by ZIP code with a target commute of 30 minutes or less, starting at 2–4 sessions per week and growing from there.</p></div>
   </div>
   <h3 style="margin:0">Oklahoma · Tulsa center</h3>
   <div class="grid c3">
