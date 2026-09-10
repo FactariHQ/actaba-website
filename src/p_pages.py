@@ -58,7 +58,7 @@ def home():
   <div class="wrap hero-copy">
     <span class="hand">Kids’ ABA therapy in Colorado &amp; Oklahoma · since 2021</span>
     <h1>Every big adventure starts <span class="hl">close to home.</span></h1>
-    <p class="lede measure">Adventure Child Therapy is a small, clinician-led ABA practice. We meet kids where life happens — living rooms across the Denver metro, Grand Junction and Pueblo, and the playroom floor of our Tulsa center — with one technician for one child, and a BCBA who looks at your child’s progress every week.</p>
+    <p class="lede measure">Adventure Child Therapy is a small, clinician-led ABA practice. We meet kids where life happens — living rooms across the Denver metro, Grand Junction, Pueblo and Ada, and the playroom floor of our Tulsa center — with one technician for one child, and a BCBA who looks at your child’s progress every week.</p>
     <div class="cta-row">{btn("#/families#start", "Start intake")}{btn("#/what-is-aba", "What is ABA?", "secondary", arrow=False)}</div>
     <div class="chips">
       <span class="chip"><i style="background:var(--meadow)">{CHECK}</i>One-on-one at the heart</span>
@@ -79,7 +79,7 @@ def home():
   <div class="stack g14">
     <span class="hand">What we do</span>
     <h2>Therapy that happens where your child’s day happens</h2>
-    <p class="muted">In Colorado, that’s usually your home — plus daycare, school and community outings when your child’s plan calls for it. In Tulsa, it’s our center, with a whole team on site, and nearby homes too. We pick the setting because it’s where the skill needs to work, not because it’s convenient for us.</p>
+    <p class="muted">In Colorado, that’s usually your home — plus daycare, school and community outings when your child’s plan calls for it. In Tulsa, it’s our center, with a whole team on site, and nearby homes too. Around Ada, it’s your home. We pick the setting because it’s where the skill needs to work, not because it’s convenient for us.</p>
     <p class="muted">Behind every child: an assessment you can actually read, a technician who stays with your family, a BCBA who truly supervises, and an admin team whose whole job is keeping authorizations, schedules and claims off your plate.</p>
     <div>{go("#/services", "See all eight services")}</div>
   </div>
@@ -116,8 +116,8 @@ def home():
 </div></section>
 
 <section class="sec band b-sky"><div class="wrap stack g28">
-  {head("Where we work", "Four communities, two states, one standard of care")}
-  <div class="grid c4">{locs}</div>
+  {head("Where we work", "Five communities, two states, one standard of care")}
+  <div class="grid c5">{locs}</div>
   <div class="note" style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:start">{ico("i-seed")}<p><strong>Coming next: North Carolina.</strong> We’re working on opening in more states, starting with North Carolina, and we choose new places based on where families struggle to find care — not where it’s easiest for us. If you can’t find an ABA provider where you live, or you’re a clinician who’d love to build a team somewhere new, we’d really like to hear from you.</p></div>
 </div></section>
 
@@ -280,10 +280,12 @@ def locations():
       row("pueblo","m-pueblo","A river valley in southern Colorado","Colorado","Pueblo","In-home care for families in and around Pueblo, with the same supervision model we use in Denver and Grand Junction.","In-home and community",co,["Pueblo","Southern Colorado"]),
       row("tulsa","m-tulsa","Our Tulsa center on the prairie","Oklahoma","Tulsa Center","Our Tulsa center is a purpose-built space for kids — room to move, a kitchen for feeding and mealtime work, and a whole team on site. Families send a lunch, a change of clothes and a water bottle; we take care of the rest. We also see Tulsa-area families in their homes.","Center-based and in-home",
           '<p class="addr">1217 East 48th Street, Suite 101<br>Tulsa, OK 74105</p><p class="addr"><a href="tel:+19187648544">(918) 764-8544</a><br><a href="mailto:tulsa@actaba.com">tulsa@actaba.com</a></p>',["Tulsa","Tulsa County"], extra='<div class="callout small">Same-day cancellations: call or text (918) 764-8544 by 6:00 a.m.</div>'),
+      row("ada","m-ada","Rolling hills and oak trees around Ada, Oklahoma","Oklahoma","Ada","In-home ABA for families in and around Ada, with the same BCBA supervision and SoonerCare billing we use in Tulsa. Sessions happen in your home, where the skills need to work.","In-home",
+          f'<p class="addr">{OK_TEL}<br><a href="mailto:info@actaba.com">info@actaba.com</a></p>',["Ada","Nearby communities"], extra='<div class="callout small">Same-day cancellations: call or text (918) 764-8544 by 6:00 a.m.</div>'),
     ])
     note = '<div class="note" style="max-width:62ch">In <strong>Colorado</strong>, ABA can begin with a letter from your child’s physician recommending it — no autism diagnosis required. In <strong>Oklahoma</strong>, a diagnostic evaluation needs to be on file first.</div>'
     return f'''<div data-route="locations" data-title="Locations | Adventure Child Therapy" hidden>
-{phead("Locations", "Where we work", "In-home and community care across Colorado, a center in Tulsa, and an honest answer about the places we can’t reach yet.", extra=note)}
+{phead("Locations", "Where we work", "In-home and community care across Colorado, a center in Tulsa, in-home care around Ada, and an honest answer about the places we can’t reach yet.", extra=note)}
 <section class="sec"><div class="wrap stack" style="gap:clamp(48px,7vw,84px)">{rows}</div></section>
 <section class="sec band b-meadow" id="expanding"><div class="wrap split">
   <div class="stack g14">
