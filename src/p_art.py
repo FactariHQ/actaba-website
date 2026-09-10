@@ -91,6 +91,17 @@ DEFS = r"""<svg aria-hidden="true" focusable="false" style="position:absolute;wi
   <path d="M60 96 C70 86 110 84 104 76 C98 70 130 68 150 66 L160 67 C140 70 112 72 118 78 C126 88 92 90 84 96Z" fill="var(--sky)"/>
   <path d="M-4 90 C40 86 50 88 64 92 L60 96 H-4Z M150 96 C170 88 190 88 204 88 V96Z" fill="var(--hill-5)"/>
 </symbol>
+<symbol id="m-ada" viewBox="0 0 200 96" preserveAspectRatio="xMidYMid slice">
+  <rect width="200" height="96" fill="var(--band-sun)"/>
+  <circle cx="54" cy="28" r="13" fill="var(--sun)"/>
+  <path d="M-4 58 C30 46 62 50 92 56 C124 62 160 46 204 52 V96 H-4Z" fill="var(--hill-2)"/>
+  <path d="M-4 72 C36 64 76 70 112 72 C146 74 176 64 204 66 V96 H-4Z" fill="var(--hill-3)" filter="url(#pc)"/>
+  <rect x="139" y="50" width="4" height="14" rx="1.5" fill="var(--coral-ink)"/>
+  <circle cx="141" cy="46" r="11" fill="var(--hill-4)" filter="url(#pc)"/>
+  <rect x="159" y="56" width="3" height="10" rx="1.5" fill="var(--coral-ink)"/>
+  <circle cx="160.5" cy="53" r="8" fill="var(--meadow)" filter="url(#pc)"/>
+  <path d="M-4 88 C50 80 110 86 204 82 V96 H-4Z" fill="var(--hill-5)" filter="url(#pc)"/>
+</symbol>
 <symbol id="m-tulsa" viewBox="0 0 200 96" preserveAspectRatio="xMidYMid slice">
   <rect width="200" height="96" fill="var(--coral-soft)"/>
   <circle cx="100" cy="46" r="26" fill="var(--sun)" opacity=".9"/>
