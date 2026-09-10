@@ -85,8 +85,12 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .c2{grid-template-columns:repeat(2,minmax(0,1fr))}
 .c3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .c4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.c5{grid-template-columns:repeat(5,minmax(0,1fr))}
 .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
 @media (max-width:1040px){.c4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:1180px){.c5{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:880px){.c5{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.c5{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:880px){.c2,.c3,.c4,.split{grid-template-columns:minmax(0,1fr)}}
 .measure{max-width:var(--measure)}
 .lede{font-size:clamp(1.08rem,1.6vw,1.24rem);line-height:1.6;color:var(--ink-2)}
