@@ -36,7 +36,7 @@ PAGES = [
   ("providers", "/providers/", p_pro.providers, "Referral information for providers | Adventure Child Therapy",
    "For pediatricians, diagnosticians, school teams and case managers: documentation requirements by state, coverage, secure records, and the referral form.", "providers"),
   ("careers", "/careers/", p_pro.careers, "Careers | Adventure Child Therapy",
-   "Behavior technician, RBT and BCBA positions in Colorado and Oklahoma. Full-time technicians are salaried; schedules are built from your availability.", "careers"),
+   "Behavior technician, RBT and BCBA positions in Colorado and Oklahoma. Colorado in-home technicians are salaried full-time; Tulsa center technicians are hourly on set shifts.", "careers"),
   ("about", "/about/", p_pages.about, "About us | Adventure Child Therapy",
    "A small, clinician-led ABA practice founded in 2021 — our clinical values, how we measure ourselves, and how we keep care safe and organized.", "about"),
   ("contact", "/contact/", p_pages.contact, "Contact | Adventure Child Therapy",
