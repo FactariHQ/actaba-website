@@ -102,7 +102,7 @@ SERVICES = [
   ("social", "i-talk", "Social and communication skills", "Being understood, and getting to be a kid with other kids.",
    "Being understood — and getting to be a kid with other kids.",
    "Communication comes first: a reliable way for your child to ask, say no, and be understood — whether that’s words, a device, or signs. Then the fun, harder social stuff: joining play, taking turns, and handling the moment a friend says no.",
-   ["Functional communication training", "Play and friendship skills in real settings", "Support for AAC use alongside your child’s speech-language provider", "Sibling and peer coaching where it helps"]),
+   ["Functional communication training", "Play and friendship skills in real settings", "Support for AAC use alongside your child’s speech-language provider", "Sibling and peer coaching where it helps", "Small social groups when your child is ready to practice with peers"]),
   ("daily-living", "i-shirt", "Daily living skills", "Getting dressed, brushing teeth, bedtime — independence, one routine at a time.",
    "Independence, one routine at a time.",
    "Getting dressed, brushing teeth, bedtime routines, staying safe, waiting, and moving from one activity to the next. The everyday list that decides whether a Saturday outing feels possible.",
@@ -134,9 +134,9 @@ BENEFITS = [
   ("Paid time off and paid sick time", "Accrued, and actually usable."),
   ("Paid training", "Including Safety-Care (QBS) crisis-procedure certification."),
   ("Certification reimbursement", "We reimburse RBT, BCaBA and BCBA exam costs with a commitment period — 6, 12 or 18 months by credential — agreed in writing before the money goes out."),
-  ("Mileage reimbursement", "Drive time isn’t paid hourly, and we tell you that on the first screening call rather than at the offer."),
-  ("Professional development", "CEU support and a clear path from BT to RBT to Lead RBT to salaried and beyond."),
-  ("Schedules built around you", "We build schedules from your availability and open sessions instead of posting a fixed shift and hoping. Target commute: 25 minutes or less."),
+  ("Mileage reimbursement", "For Colorado in-home roles. Drive time isn’t paid hourly, and we tell you that on the first screening call rather than at the offer."),
+  ("Professional development", "CEU support and a clear path from BT to RBT to Lead RBT to full-time and beyond."),
+  ("Schedules that fit the setting", "In Colorado, we build in-home schedules from your availability, with a target commute of 25 minutes or less. At our Tulsa center, you work set shifts with the team on site."),
 ]
 
 LOCS = [
