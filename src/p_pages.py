@@ -61,7 +61,7 @@ def home():
     <p class="lede measure">Adventure Child Therapy is a small, clinician-led ABA practice. We meet kids where life happens — living rooms across the Denver metro, Grand Junction and Pueblo, and the playroom floor of our Tulsa center — with one technician for one child, and a BCBA who looks at your child’s progress every week.</p>
     <div class="cta-row">{btn("#/families#start", "Start intake")}{btn("#/what-is-aba", "What is ABA?", "secondary", arrow=False)}</div>
     <div class="chips">
-      <span class="chip"><i style="background:var(--meadow)">{CHECK}</i>One-on-one, always</span>
+      <span class="chip"><i style="background:var(--meadow)">{CHECK}</i>One-on-one at the heart</span>
       <span class="chip"><i style="background:var(--sky)">{CHECK}</i>No autism diagnosis needed to start in Colorado</span>
       <span class="chip"><i style="background:var(--coral)">{CHECK}</i>$0 for authorized care on Medicaid</span>
       <span class="chip"><i style="background:var(--sun-deep)">{CHECK}</i>Parent coaching built in</span>
@@ -125,7 +125,7 @@ def home():
   <div class="stack g14">
     <span class="hand meadow">Working here</span>
     <h2>A job where you’re supported, too</h2>
-    <p class="muted">Full-time technicians here are salaried, not hourly — so a family’s cancellation doesn’t shrink your paycheck, and billable hours above your base are paid on top. We group cases by ZIP code, reimburse mileage, and tell you on the very first call that drive time isn’t paid hourly, because you deserve to know that before an offer, not after.</p>
+    <p class="muted">In Colorado, our full-time in-home technicians are salaried, not hourly — so a family’s cancellation doesn’t shrink your paycheck, and billable hours above your base are paid on top. We group cases by ZIP code, reimburse mileage, and tell you on the very first call that drive time isn’t paid hourly, because you deserve to know that before an offer, not after. At our Tulsa center, technicians are hourly and work set shifts alongside the team on site.</p>
     <div class="pills"><span class="pill">Denver metro</span><span class="pill">Grand Junction</span><span class="pill">Tulsa</span><span class="pill">BCBA roles</span></div>
     <div>{btn("#/careers", "See open roles", "secondary")}</div>
   </div>
