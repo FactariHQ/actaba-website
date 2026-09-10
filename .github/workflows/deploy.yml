@@ -1,0 +1,54 @@
+name: Deploy actaba.com
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build the site
+        working-directory: src
+        run: python build_static.py
+
+      - name: Fetch fonts for the share image
+        run: |
+          mkdir -p fonts && cd fonts
+          npm pack @fontsource/baloo-2@5.3.0 @fontsource/lexend@5.3.0 @fontsource/patrick-hand@5.3.0
+          for f in *.tgz; do d="${f%.tgz}"; mkdir -p "$d"; tar xzf "$f" -C "$d" --strip-components=1; done
+
+      - name: Render share image and touch icon
+        working-directory: src
+        run: |
+          pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
+          python render_images.py
+
+      - name: Check the build
+        run: |
+          for p in index.html families/index.html services/index.html what-is-aba/index.html locations/index.html providers/index.html careers/index.html about/index.html contact/index.html 404.html CNAME og-image.png apple-touch-icon.png; do
+            test -s "src/dist/$p" || { echo "missing $p"; exit 1; }
+          done
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: src/dist
+
+      - uses: actions/deploy-pages@v4
