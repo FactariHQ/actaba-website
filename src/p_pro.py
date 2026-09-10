@@ -95,10 +95,10 @@ JOBS_PRO = [
    "Hourly, based on experience and certification. The rate is provided on the first screening call.",
    "Consistent afternoon and early-evening sessions with local supervision.",
    ["Under 23 billable hours per week","Afternoon and early evening availability preferred","Minimum availability: two days per week, or 10–12 hours","RBT certification support for uncertified candidates"]),
-  ("rbt-tulsa","Behavior Technician / RBT","Tulsa · Center-based and in-home","Full-time and part-time",
-   "Salaried full-time or hourly part-time. Figures are provided on the first screening call.",
-   "Center-based work with an on-site clinical team, plus in-home cases in the Tulsa area.",
-   ["On-site team, with Lead RBTs leading onboarding","Paid training, including Safety-Care certification","Spanish-speaking candidates especially encouraged to apply"]),
+  ("rbt-tulsa","Behavior Technician / RBT","Tulsa · Center-based","Full-time and part-time",
+   "Hourly for full-time and part-time, on set shifts at our Tulsa center. The rate is provided on the first screening call.",
+   "Center-based work on scheduled shifts, alongside an on-site clinical team.",
+   ["Set shifts at the center, with no driving between family homes","On-site team, with Lead RBTs leading onboarding","Paid training, including Safety-Care certification","Spanish-speaking candidates especially encouraged to apply"]),
   ("bcba","Board Certified Behavior Analyst (BCBA)","Denver · Grand Junction · Tulsa","Full-time",
    "Competitive compensation, discussed directly on the first call.",
    "A caseload sized for meaningful supervision, dedicated administrative support, and a leadership team with direct clinic operations experience.",
@@ -113,7 +113,7 @@ def careers():
     form = f'''<form class="act" data-form="careers" data-inst="{inst}" novalidate>
       <div class="f2">{field(inst,"app_name","Full name",required=True,auto="name")}{field(inst,"app_email","Email",typ="email",required=True,auto="email")}</div>
       <div class="f2">{field(inst,"app_phone","Phone",typ="tel",required=True,auto="tel")}{field(inst,"app_role","Position",kind="select",required=True,options=roles)}</div>
-      <div class="f2">{field(inst,"app_cert","Certification",kind="select",options=["RBT — active","BCaBA","BCBA","Not yet certified, willing to pursue","Other"])}{field(inst,"app_zip","Home ZIP code",required=True,auto="postal-code",hint="Cases are clustered to keep commutes near 25 minutes.")}</div>
+      <div class="f2">{field(inst,"app_cert","Certification",kind="select",options=["RBT — active","BCaBA","BCBA","Not yet certified, willing to pursue","Other"])}{field(inst,"app_zip","Home ZIP code",required=True,auto="postal-code",hint="Colorado in-home cases are clustered to keep commutes near 25 minutes.")}</div>
       {field(inst,"app_avail","Weekly availability",kind="textarea",required=True,rows=3,placeholder="Days and time blocks. Most sessions fall in the afternoon and 3–6pm. Minimum to hire: two days per week or 10–12 hours.")}
       {field(inst,"app_notes","Additional information",kind="textarea",rows=3)}
       {consent(inst)}
@@ -123,7 +123,7 @@ def careers():
     glance = [
       ("Open roles", f'<span class="tnum">{len(JOBS_PRO)}</span> positions'),
       ("Locations", "Denver metro, Grand Junction, Tulsa"),
-      ("Employment", "Full-time salaried or part-time hourly"),
+      ("Employment", "Colorado in-home: salaried or hourly. Tulsa center: hourly shifts"),
       ("Compensation", "Provided on the first screening call"),
     ]
     pil = '<div class="grid c4">' + "".join(f'<div class="card"><h3>{t}</h3><p class="small muted">{d}</p></div>' for t, d, _ in PILLARS) + '</div>'
@@ -131,20 +131,25 @@ def careers():
       ("Paid time off and paid sick time", "Accrued and usable."),
       ("Paid training", "Including Safety-Care (QBS) crisis-procedure certification."),
       ("Certification reimbursement", "RBT, BCaBA and BCBA exam costs reimbursed with a commitment period of 6, 12 or 18 months by credential, agreed in writing in advance."),
-      ("Mileage reimbursement", "Drive time is not paid hourly. We disclose this on the first screening call."),
-      ("Professional development", "CEU support and a defined pathway from BT to RBT to Lead RBT and salaried roles."),
-      ("Availability-based scheduling", "Schedules are built from your availability and open sessions, with a target commute of 25 minutes or less."),
+      ("Mileage reimbursement", "For Colorado in-home roles. Drive time is not paid hourly, and we disclose this on the first screening call."),
+      ("Professional development", "CEU support and a defined pathway from BT to RBT to Lead RBT and full-time roles."),
+      ("Scheduling by setting", "Colorado in-home schedules are built from your availability, with a target commute of 25 minutes or less. Tulsa center roles work set shifts on site."),
     ])
     return f'''<div data-route="careers" class="pro" data-title="Careers | Adventure Child Therapy" hidden>
-{phead_pro("Careers", "Clinical careers at Adventure Child Therapy", "Behavior technician, RBT and BCBA positions in Colorado and Oklahoma. Terms are stated plainly: full-time technicians are salaried, schedules are built from your availability, and mileage is reimbursed while drive time is not paid hourly.", glance,
+{phead_pro("Careers", "Clinical careers at Adventure Child Therapy", "Behavior technician, RBT and BCBA positions in Colorado and Oklahoma. Terms are stated plainly and differ by setting: Colorado in-home technicians are salaried full-time or hourly part-time, with schedules built from their availability; Tulsa center technicians are hourly and work set shifts at the center.", glance,
   [("#/careers#pay","Pay structure"),("#/careers#roles","Open roles"),("#/careers#success","How success is measured"),("#/careers#benefits","Benefits"),("#/careers#apply","Apply")])}
 
 <section class="sec" id="pay" style="scroll-margin-top:90px"><div class="wrap stack g28">
-  {sec_head("Pay structure", "How compensation works", "Exact figures are shared on the first screening call, before any offer.")}
+  {sec_head("Pay structure", "How compensation works", "Pay structure depends on the setting. Exact figures are shared on the first screening call, before any offer.")}
+  <h3 style="margin:0">Colorado · In-home</h3>
   <div class="grid c3">
     <div class="card"><span class="k">Full-time</span><h3>Salaried, not hourly</h3><p class="small muted">Base pay is set against 23 billable hours per week, and every billable hour above that is paid in addition. Falling below 23 does not reduce your base, provided you maintain the availability agreed at hire.</p></div>
     <div class="card"><span class="k">Part-time</span><h3>Hourly, for direct service</h3><p class="small muted">Rate based on experience, certification and performance. Minimum to hire is two days per week, or 10–12 hours.</p></div>
     <div class="card"><span class="k">Scheduling</span><h3>Built from your availability</h3><p class="small muted">We do not hire into fixed shifts. Cases are clustered by ZIP code with a target commute of 25 minutes or less, starting at 2–4 sessions per week and growing from there.</p></div>
+  </div>
+  <h3 style="margin:0">Oklahoma · Tulsa center</h3>
+  <div class="grid c3">
+    <div class="card"><span class="k">Full-time and part-time</span><h3>Hourly, on set shifts</h3><p class="small muted">Technicians at our Tulsa center are paid hourly, full-time and part-time alike, and work scheduled shifts on site with the clinical team. Sessions happen at the center, so there is no driving between family homes.</p></div>
   </div>
 </div></section>
 
@@ -168,11 +173,11 @@ def careers():
   <div class="stack g14">
     <span class="hand">Career pathway</span>
     <h2>Advancement</h2>
-    <p class="muted measure">Technicians advance into Lead RBT roles responsible for onboarding and training, into full-time salaried positions, and, with reimbursement and supervision, toward BCaBA and BCBA certification. New hires typically reach independence on a case within two to three weeks; we hire in controlled cohorts to stay within training capacity.</p>
+    <p class="muted measure">Technicians advance into Lead RBT roles responsible for onboarding and training, into full-time positions, and, with reimbursement and supervision, toward BCaBA and BCBA certification. New hires typically reach independence on a case within two to three weeks; we hire in controlled cohorts to stay within training capacity.</p>
   </div>
   <div class="card stack g14">
     <h3>Before you apply</h3>
-    {ticks(["Most sessions take place in the afternoon and early evening.","Colorado positions are in family homes and require reliable transportation.","Mileage is reimbursed; drive time is not paid hourly.","Please list the availability you can reliably commit to — schedules are built directly from it."])}
+    {ticks(["Colorado positions are in family homes, mostly in the afternoon and early evening, and require reliable transportation.","In Colorado, mileage is reimbursed; drive time is not paid hourly.","Tulsa positions are hourly, on set shifts at the center.","Please list the availability you can reliably commit to — schedules are built directly from it."])}
   </div>
 </div></section>
 
