@@ -358,7 +358,7 @@ def contact():
   </div>
   <div class="grid c3">
     <div class="card"><span class="k">Tulsa center</span><p class="addr">1217 East 48th Street, Suite 101<br>Tulsa, OK 74105</p><p class="addr"><a href="tel:+19187648544">(918) 764-8544</a><br><a href="mailto:tulsa@actaba.com">tulsa@actaba.com</a></p></div>
-    <div class="card"><span class="k">Fax</span><h3 class="tnum">888-910-5088</h3><p class="small muted">Referrals, records and authorization paperwork.</p></div>
+    <div class="card"><span class="k">Fax</span><h3 class="tnum">(303) 374-5911</h3><p class="small muted">Referrals, records and authorization paperwork.</p></div>
     <div class="card"><span class="k">Need to cancel a session?</span><p class="small muted">Same-day cancellations should reach us by <strong>6:00 a.m.</strong> — call or text your location’s number. For planned time off, two weeks’ notice helps us protect your spot and your technician’s schedule.</p></div>
   </div>
 </div></section>
