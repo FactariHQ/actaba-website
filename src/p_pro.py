@@ -25,7 +25,7 @@ def providers():
       <div class="form-status" role="status" aria-live="polite" data-status></div>
     </form>'''
     glance = [
-      ("Fax", '<span class="tnum">888-910-5088</span>'),
+      ("Fax", '<span class="tnum">(303) 374-5911</span>'),
       ("Colorado", CO_TEL),
       ("Oklahoma", OK_TEL),
       ("Service areas", "Denver metro, Grand Junction, Pueblo, Tulsa, Ada"),
@@ -62,7 +62,7 @@ def providers():
   </div>
   <div class="card stack g14">
     <div class="lead-list" style="border-top:0">
-      <div style="grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr)"><span class="k">Fax</span><span class="tnum">888-910-5088</span></div>
+      <div style="grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr)"><span class="k">Fax</span><span class="tnum">(303) 374-5911</span></div>
       <div style="grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr)"><span class="k">Colorado</span><span>{CO_TEL}</span></div>
       <div style="grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr)"><span class="k">Oklahoma</span><span>{OK_TEL}</span></div>
       <div style="grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);border-bottom:0"><span class="k">Email</span><span><a href="mailto:info@actaba.com">info@actaba.com</a> <span class="tiny">(no clinical details)</span></span></div>
