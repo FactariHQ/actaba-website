@@ -1,7 +1,7 @@
 from p_art import ico, mini
 
 CO_TEL = '<a href="tel:+17204328989">(720) 432-8989</a>'
-NC_TEL = CO_TEL  # North Carolina families call the main line
+NC_TEL = '<a href="tel:+13362709453">(336) 270-9453</a>'
 OK_TEL = '<a href="tel:+19187648544">(918) 764-8544</a>'
 ARROW = '<span class="arrow" aria-hidden="true">&rarr;</span>'
 TIP = '<svg aria-hidden="true" focusable="false"><use href="#leaf"/></svg>'
@@ -179,5 +179,5 @@ def intake_block(title, lede):
     <p class="muted measure">On the live site, the ACT ABA intake form sits right here. This review preview blocks third-party forms from loading, so it opens in a new tab instead.</p>
     {btn("https://form.jotform.com/231875318826061", "Open the intake form").replace('href=', 'target="_blank" rel="noopener" href=')}
   </div>
-  <p class="tiny">Rather talk to a person? Call Colorado &amp; North Carolina {CO_TEL} or Oklahoma {OK_TEL}.</p>
+  <p class="tiny">Rather talk to a person? Call Colorado {CO_TEL}, Oklahoma {OK_TEL} or North Carolina {NC_TEL}.</p>
 </div>'''
