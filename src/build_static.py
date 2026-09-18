@@ -2,7 +2,7 @@ import re, os, json, shutil, datetime
 import p_shared, p_pages, p_pro
 from p_css import CSS
 from p_art import DEFS, LOGO
-from p_shared import CO_TEL, OK_TEL, ARROW
+from p_shared import CO_TEL, OK_TEL, NC_TEL, ARROW
 
 SITE = "https://actaba.com"
 OUT = "dist"
@@ -16,7 +16,7 @@ def intake_live(title, lede):
   <div class="intake-embed">
     <iframe id="JotFormIFrame-231875318826061" title="ACT ABA Intake form" allow="geolocation; microphone; camera; fullscreen" src="https://form.jotform.com/231875318826061" style="min-width:100%;max-width:100%;height:900px;border:none" loading="lazy"></iframe>
   </div>
-  <p class="tiny">Rather talk to a person? Call Colorado &amp; North Carolina {CO_TEL} or Oklahoma {OK_TEL}. Trouble loading the form? <a href="https://form.jotform.com/231875318826061" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+  <p class="tiny">Rather talk to a person? Call Colorado {CO_TEL}, Oklahoma {OK_TEL} or North Carolina {NC_TEL}. Trouble loading the form? <a href="https://form.jotform.com/231875318826061" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
 </div>'''
 p_pages.intake_live = intake_live
 p_pages.intake_block = intake_live
@@ -40,7 +40,7 @@ PAGES = [
   ("about", "/about/", p_pages.about, "About us | Adventure Child Therapy",
    "A small, clinician-led ABA practice founded in 2021 — our clinical values, how we measure ourselves, and how we keep care safe and organized.", "about"),
   ("contact", "/contact/", p_pages.contact, "Contact | Adventure Child Therapy",
-   "Call Colorado & North Carolina (720) 432-8989 or Oklahoma (918) 764-8544, email info@actaba.com, or start intake online.", "contact"),
+   "Call Colorado (720) 432-8989, Oklahoma (918) 764-8544 or North Carolina (336) 270-9453, email info@actaba.com, or start intake online.", "contact"),
 ]
 NAV = [("/","home","Home"),("/families/","families","Families"),("/services/","services","Services"),("/what-is-aba/","aba","What is ABA"),("/locations/","locations","Locations"),("/providers/","providers","Providers"),("/careers/","careers","Careers"),("/about/","about","About"),("/contact/","contact","Contact")]
 
@@ -63,8 +63,9 @@ JSONLD = {
      "medicalSpecialty": "Applied Behavior Analysis",
      "areaServed": ["Denver metro, CO", "Grand Junction, CO", "Pueblo, CO", "Tulsa, OK", "Ada, OK", "Charlotte, NC", "Thomasville, NC"],
      "contactPoint": [
-        {"@type": "ContactPoint", "telephone": "+1-720-432-8989", "contactType": "customer service", "areaServed": ["US-CO", "US-NC"]},
-        {"@type": "ContactPoint", "telephone": "+1-918-764-8544", "contactType": "customer service", "areaServed": "US-OK"}]},
+        {"@type": "ContactPoint", "telephone": "+1-720-432-8989", "contactType": "customer service", "areaServed": "US-CO"},
+        {"@type": "ContactPoint", "telephone": "+1-918-764-8544", "contactType": "customer service", "areaServed": "US-OK"},
+        {"@type": "ContactPoint", "telephone": "+1-336-270-9453", "contactType": "customer service", "areaServed": "US-NC"}]},
     {"@type": "MedicalClinic", "@id": SITE + "/locations/#tulsa", "name": "Adventure Child Therapy — Tulsa Center",
      "parentOrganization": {"@id": SITE + "/#org"}, "telephone": "+1-918-764-8544", "email": "tulsa@actaba.com",
      "address": {"@type": "PostalAddress", "streetAddress": "1217 East 48th Street, Suite 101", "addressLocality": "Tulsa", "addressRegion": "OK", "postalCode": "74105", "addressCountry": "US"},
@@ -166,11 +167,11 @@ JS = r"""
         status.className = 'form-status ok show';
         status.innerHTML = kind === 'careers'
           ? '<strong>Application received — thank you.</strong> A member of our team reviews every application, and every applicant receives a response.'
-          : '<strong>Referral received — thank you.</strong> We will contact the family and confirm the outcome with you. For anything urgent, call Colorado &amp; North Carolina <a href="tel:+17204328989">(720) 432-8989</a> or Oklahoma <a href="tel:+19187648544">(918) 764-8544</a>.';
+          : '<strong>Referral received — thank you.</strong> We will contact the family and confirm the outcome with you. For anything urgent, call Colorado <a href="tel:+17204328989">(720) 432-8989</a>, Oklahoma <a href="tel:+19187648544">(918) 764-8544</a> or North Carolina <a href="tel:+13362709453">(336) 270-9453</a>.';
         status.scrollIntoView({ block:'center', behavior: reduce ? 'auto':'smooth' });
       }).catch(function(){
         status.className = 'form-status warn show';
-        status.innerHTML = '<strong>That didn’t go through.</strong> Please call Colorado &amp; North Carolina <a href="tel:+17204328989">(720) 432-8989</a> or Oklahoma <a href="tel:+19187648544">(918) 764-8544</a>, or email <a href="mailto:info@actaba.com">info@actaba.com</a>.';
+        status.innerHTML = '<strong>That didn’t go through.</strong> Please call Colorado <a href="tel:+17204328989">(720) 432-8989</a>, Oklahoma <a href="tel:+19187648544">(918) 764-8544</a> or North Carolina <a href="tel:+13362709453">(336) 270-9453</a>, or email <a href="mailto:info@actaba.com">info@actaba.com</a>.';
       }).then(function(){ btnEl.disabled = false; btnEl.style.opacity = ''; });
     });
     f.querySelectorAll('input,select,textarea').forEach(function(el){
@@ -186,6 +187,7 @@ EXTRA_CSS = """
 .intake-embed iframe{display:block;width:100%}
 .skip{position:absolute}
 .nf{min-height:50vh}
+a[href^="tel:"]{white-space:nowrap}
 """
 
 def header(active):
@@ -193,7 +195,7 @@ def header(active):
     nav = "".join(f'<a href="{h}"{CUR if k==active else ""}>{t}</a>' for h,k,t in NAV)
     return f'''<a class="skip" href="#main">Skip to content</a>
 {DEFS}
-<div class="topstrip"><div class="wrap"><span>New here? One friendly call is all it takes to get started.</span><span>Colorado &amp; NC {CO_TEL} · Oklahoma {OK_TEL}</span></div></div>
+<div class="topstrip"><div class="wrap"><span>New here? One friendly call is all it takes to get started.</span><span>Colorado {CO_TEL} · Oklahoma {OK_TEL} · North Carolina {NC_TEL}</span></div></div>
 <header class="hdr">
   <div class="wrap hdr-in">
     <a class="brand" href="/" aria-label="Adventure Child Therapy home">{LOGO}<span class="bn"><span class="b1">Adventure Child Therapy</span><span class="b2">ABA your way</span></span></a>
@@ -217,7 +219,7 @@ FOOTER = f'''<footer class="ftr">
     </div>
     <div class="ftr-btm">
       <span>&copy; <span data-year>2026</span> Adventure Child Therapy, LLC. All rights reserved.</span>
-      <span>Colorado &amp; NC {CO_TEL} · Oklahoma {OK_TEL} · <a href="mailto:info@actaba.com">info@actaba.com</a></span>
+      <span>Colorado {CO_TEL} · Oklahoma {OK_TEL} · North Carolina {NC_TEL} · <a href="mailto:info@actaba.com">info@actaba.com</a></span>
     </div>
   </div>
 </footer>'''
