@@ -89,7 +89,7 @@ def home():
 <section class="sec"><div class="wrap stack g40">
   {head("The path to your first session", "Five steps, and we’ll walk every one with you", "Most families find us somewhere in the middle of this path. Wherever you are, the next step is the same: give us a call or send the form.")}
   {trail()}
-  <div class="cta-row">{btn("#/families#start", "Start intake")}<span class="muted small">or call Colorado &amp; NC {CO_TEL} · Oklahoma {OK_TEL}</span></div>
+  <div class="cta-row">{btn("#/families#start", "Start intake")}<span class="muted small">or call Colorado {CO_TEL} · Oklahoma {OK_TEL} · North Carolina {NC_TEL}</span></div>
 </div></section>
 
 <section class="sec band b-meadow"><div class="wrap split" style="align-items:center">
@@ -143,7 +143,7 @@ def home():
     <div class="stack g20">
       <span class="hand">One call is all it takes</span>
       <h2 style="max-width:20ch">Tell us about your child. We’ll be honest about what comes next.</h2>
-      <div class="cta-row">{btn("#/families#start", "Start intake")}{btn("tel:+17204328989", "Colorado & NC (720) 432-8989", "secondary", arrow=False)}{btn("tel:+19187648544", "Oklahoma (918) 764-8544", "secondary", arrow=False)}</div>
+      <div class="cta-row">{btn("#/families#start", "Start intake")}{btn("tel:+17204328989", "Colorado (720) 432-8989", "secondary", arrow=False)}{btn("tel:+19187648544", "Oklahoma (918) 764-8544", "secondary", arrow=False)}{btn("tel:+13362709453", "North Carolina (336) 270-9453", "secondary", arrow=False)}</div>
     </div>
     <svg class="kite-art" viewBox="0 0 120 220" aria-hidden="true" focusable="false"><use href="#kitesym"/></svg>
   </div>
@@ -196,7 +196,7 @@ def families():
 </div></section>
 
 <section class="sec tight" id="start"><div class="wrap">
-  {intake_block("Start intake", f"This is the same information we’d collect on the phone. Someone from our team will call you back — forms never just sit in an inbox here. If you’d rather talk to a person right now, call Colorado &amp; North Carolina {CO_TEL} or Oklahoma {OK_TEL}.")}
+  {intake_block("Start intake", f"This is the same information we’d collect on the phone. Someone from our team will call you back — forms never just sit in an inbox here. If you’d rather talk to a person right now, call Colorado {CO_TEL}, Oklahoma {OK_TEL} or North Carolina {NC_TEL}.")}
 </div></section>
 </div>'''
 
@@ -355,9 +355,10 @@ def contact():
     return f'''<div data-route="contact" data-title="Contact | Adventure Child Therapy" hidden>
 {phead("Contact", "Come say hello", "Our admin team answers the phones during business hours. If you reach voicemail, leave your name and number — we return calls the same business day.")}
 <section class="sec tight"><div class="wrap stack g20">
-  <div class="grid c3">
-    <div class="card tint-sun">{ico("i-talk")}<span class="k">Colorado &amp; North Carolina</span><h3><a href="tel:+17204328989">(720) 432-8989</a></h3><p class="small muted">New families, scheduling, authorizations and billing questions.</p></div>
+  <div class="grid c4">
+    <div class="card tint-sun">{ico("i-talk")}<span class="k">Colorado</span><h3><a href="tel:+17204328989">(720) 432-8989</a></h3><p class="small muted">New families, scheduling, authorizations and billing questions.</p></div>
     <div class="card tint-coral">{ico("i-talk")}<span class="k">Oklahoma</span><h3><a href="tel:+19187648544">(918) 764-8544</a></h3><p class="small muted">New families, scheduling, authorizations and billing questions.</p></div>
+    <div class="card tint-meadow">{ico("i-talk")}<span class="k">North Carolina</span><h3><a href="tel:+13362709453">(336) 270-9453</a></h3><p class="small muted">New families, scheduling, authorizations and billing questions.</p></div>
     <div class="card tint-sky">{ico("i-letter")}<span class="k">Email</span><h3><a href="mailto:info@actaba.com">info@actaba.com</a></h3><p class="small muted">General questions. Please don’t email clinical details or records — we’ll send you a secure link.</p></div>
   </div>
   <div class="grid c3">
