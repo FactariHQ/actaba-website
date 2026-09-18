@@ -1,6 +1,7 @@
 from p_art import ico, mini
 
 CO_TEL = '<a href="tel:+17204328989">(720) 432-8989</a>'
+NC_TEL = CO_TEL  # North Carolina families call the main line
 OK_TEL = '<a href="tel:+19187648544">(918) 764-8544</a>'
 ARROW = '<span class="arrow" aria-hidden="true">&rarr;</span>'
 TIP = '<svg aria-hidden="true" focusable="false"><use href="#leaf"/></svg>'
@@ -24,10 +25,10 @@ STEPS = [
    "One call or one form. We’ll ask for your child’s name and date of birth, a good callback number, your insurance carrier and member ID, whether there’s a diagnosis and who made it, how you heard about us, and the days and times that realistically work for sessions.",
    "We won’t guess at a start date on that first call. As soon as we know, you’ll know.", "pin"),
   ("Depends on your state", "Gather what we need on file",
-   "In Colorado, your child doesn’t need an autism diagnosis to begin — a letter from your child’s physician recommending ABA is enough, and we’ll tell you exactly what it should say. In Oklahoma, a diagnostic evaluation needs to be on file before ABA can start. Don’t have the paperwork yet? We’ll share our referral list and hold on to your information, so you never have to start over.",
+   "In Colorado, your child doesn’t need an autism diagnosis to begin — a letter from your child’s physician recommending ABA is enough, and we’ll tell you exactly what it should say. In Oklahoma and North Carolina, a diagnostic evaluation needs to be on file before ABA can start. Don’t have the paperwork yet? We’ll share our referral list and hold on to your information, so you never have to start over.",
    "No diagnosis yet isn’t a dead end anywhere — and in Colorado, you may not need one at all.", "pin-sky"),
   ("Days to weeks", "Benefits and authorization",
-   "We check your coverage and request authorization for you. With Health First Colorado or SoonerCare, authorized services cost your family nothing. With a commercial plan, we’ll share exactly what we verified and on what date — we’ll never make up a number just to fill a silence.",
+   "We check your coverage and request authorization for you. With Health First Colorado, SoonerCare or NC Medicaid, authorized services cost your family nothing. With a commercial plan, we’ll share exactly what we verified and on what date — we’ll never make up a number just to fill a silence.",
    "Coordination of benefits is needed when care starts, once a year, and any time your insurance changes.", "pin-meadow"),
   ("Usually 2–4 sessions", "Assessment",
    "A BCBA spends time with your child and with you, completes a skills assessment, and writes the treatment plan and hours request. You’ll read the goals before anything is final.",
@@ -52,11 +53,11 @@ def trail(note=True):
 
 FAQ_CORE = [
   ("Do we need an autism diagnosis before we call?",
-   "Not in Colorado. A letter from your child’s physician recommending ABA is enough to begin — no autism diagnosis required. In Oklahoma, a diagnostic evaluation does need to be on file before ABA can start (and the same will be true in North Carolina when we open there). Either way, please call: if you need an evaluation or a physician letter, we’ll tell you exactly what to ask for and share our referral list."),
+   "Not in Colorado. A letter from your child’s physician recommending ABA is enough to begin — no autism diagnosis required. In Oklahoma and North Carolina, a diagnostic evaluation does need to be on file before ABA can start. Either way, please call: if you need an evaluation or a physician letter, we’ll tell you exactly what to ask for and share our referral list."),
   ("What will this cost us?",
-   "If your child is enrolled in Health First Colorado or SoonerCare, there’s no cost to you for authorized services. If you have a commercial plan, we verify your benefits and tell you exactly what the plan said and when we checked. We won’t guess at a number just to have one to say."),
+   "If your child is enrolled in Health First Colorado, SoonerCare or NC Medicaid, there’s no cost to you for authorized services. If you have a commercial plan, we verify your benefits and tell you exactly what the plan said and when we checked. We won’t guess at a number just to have one to say."),
   ("Where do sessions happen?",
-   "In Colorado, almost always in your home — and in daycare, school or community settings when your child’s plan calls for it. In Tulsa, we have a center at 1217 East 48th Street, and we also see families in their homes. Around Ada, sessions happen in your home."),
+   "In Colorado, almost always in your home — and in daycare, school or community settings when your child’s plan calls for it. In Tulsa, we have a center at 1217 East 48th Street, and we also see families in their homes. Around Ada, sessions happen in your home. In North Carolina, around Charlotte and Thomasville, sessions happen in your home and community."),
   ("How many hours will my child get?",
    "That comes from the assessment and the authorization, not from a phone call. Hours are recommended by the BCBA who assessed your child and approved by your plan."),
   ("How long is the wait?",
@@ -145,6 +146,8 @@ LOCS = [
   ("pueblo", "m-pueblo", "Colorado", "Pueblo", "In-home and community", None, "A river valley in southern Colorado"),
   ("tulsa", "m-tulsa", "Oklahoma", "Tulsa Center", "Center-based and in-home", "1217 East 48th Street, Suite 101<br>Tulsa, OK 74105", "Our Tulsa center on the prairie"),
   ("ada", "m-ada", "Oklahoma", "Ada", "In-home", None, "Rolling hills and oak trees around Ada, Oklahoma"),
+  ("charlotte", "m-charlotte", "North Carolina", "Charlotte", "In-home and community", None, "The Charlotte skyline above leafy Piedmont hills"),
+  ("thomasville", "m-thomasville", "North Carolina", "Thomasville", "In-home and community", None, "Thomasville’s Big Chair among rolling North Carolina hills"),
 ]
 
 def field(inst, name, label, kind="input", typ="text", required=False, auto=None, options=None, placeholder="", hint=None, rows=4):
@@ -176,5 +179,5 @@ def intake_block(title, lede):
     <p class="muted measure">On the live site, the ACT ABA intake form sits right here. This review preview blocks third-party forms from loading, so it opens in a new tab instead.</p>
     {btn("https://form.jotform.com/231875318826061", "Open the intake form").replace('href=', 'target="_blank" rel="noopener" href=')}
   </div>
-  <p class="tiny">Rather talk to a person? Call Colorado {CO_TEL} or Oklahoma {OK_TEL}.</p>
+  <p class="tiny">Rather talk to a person? Call Colorado &amp; North Carolina {CO_TEL} or Oklahoma {OK_TEL}.</p>
 </div>'''
