@@ -102,6 +102,35 @@ DEFS = r"""<svg aria-hidden="true" focusable="false" style="position:absolute;wi
   <circle cx="160.5" cy="53" r="8" fill="var(--meadow)" filter="url(#pc)"/>
   <path d="M-4 88 C50 80 110 86 204 82 V96 H-4Z" fill="var(--hill-5)" filter="url(#pc)"/>
 </symbol>
+<symbol id="m-charlotte" viewBox="0 0 200 96" preserveAspectRatio="xMidYMid slice">
+  <rect width="200" height="96" fill="var(--band-sky)"/>
+  <circle cx="44" cy="24" r="12" fill="var(--sun)"/>
+  <path d="M-4 66 C30 56 70 58 104 62 C140 66 172 56 204 58 V96 H-4Z" fill="var(--hill-2)"/>
+  <rect x="96" y="34" width="14" height="34" rx="1.5" fill="var(--sky)" filter="url(#pcd)"/>
+  <rect x="112" y="18" width="16" height="50" rx="1.5" fill="var(--surface)" filter="url(#pcd)"/>
+  <path d="M112 18 L120 8 L128 18Z" fill="var(--sky)"/>
+  <rect x="130" y="30" width="12" height="38" rx="1.5" fill="var(--coral)" opacity=".8" filter="url(#pcd)"/>
+  <rect x="144" y="42" width="12" height="26" rx="1.5" fill="var(--sky)" opacity=".75"/>
+  <path d="M116 26 h8 M116 34 h8 M116 42 h8 M116 50 h8" stroke="var(--sky)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M-4 76 C40 66 80 72 116 74 C150 76 178 68 204 70 V96 H-4Z" fill="var(--hill-3)" filter="url(#pc)"/>
+  <circle cx="30" cy="70" r="10" fill="var(--hill-4)" filter="url(#pc)"/><circle cx="46" cy="72" r="8" fill="var(--meadow)" filter="url(#pc)"/>
+  <circle cx="172" cy="70" r="9" fill="var(--meadow)" filter="url(#pc)"/>
+  <path d="M-4 88 C50 81 110 86 204 82 V96 H-4Z" fill="var(--hill-5)" filter="url(#pc)"/>
+</symbol>
+<symbol id="m-thomasville" viewBox="0 0 200 96" preserveAspectRatio="xMidYMid slice">
+  <rect width="200" height="96" fill="var(--band-meadow)"/>
+  <circle cx="156" cy="24" r="12" fill="var(--sun)"/>
+  <path d="M-4 60 C34 48 70 52 100 58 C132 64 166 50 204 54 V96 H-4Z" fill="var(--hill-2)"/>
+  <rect x="68" y="58" width="36" height="8" rx="2" fill="var(--surface)" filter="url(#pcd)"/>
+  <rect x="74" y="30" width="5" height="30" rx="1.5" fill="var(--coral-ink)"/>
+  <rect x="93" y="30" width="5" height="30" rx="1.5" fill="var(--coral-ink)"/>
+  <rect x="72" y="14" width="28" height="20" rx="4" fill="var(--coral)" filter="url(#pcd)"/>
+  <rect x="70" y="34" width="32" height="6" rx="2" fill="var(--sun-deep)" filter="url(#pcd)"/>
+  <rect x="72" y="40" width="4" height="18" rx="1.5" fill="var(--coral-ink)"/><rect x="96" y="40" width="4" height="18" rx="1.5" fill="var(--coral-ink)"/>
+  <path d="M-4 74 C40 66 80 70 116 72 C150 74 178 66 204 68 V96 H-4Z" fill="var(--hill-3)" filter="url(#pc)"/>
+  <circle cx="150" cy="66" r="10" fill="var(--hill-4)" filter="url(#pc)"/><circle cx="166" cy="69" r="7" fill="var(--meadow)" filter="url(#pc)"/>
+  <path d="M-4 88 C50 81 110 86 204 82 V96 H-4Z" fill="var(--hill-5)" filter="url(#pc)"/>
+</symbol>
 <symbol id="m-tulsa" viewBox="0 0 200 96" preserveAspectRatio="xMidYMid slice">
   <rect width="200" height="96" fill="var(--coral-soft)"/>
   <circle cx="100" cy="46" r="26" fill="var(--sun)" opacity=".9"/>
