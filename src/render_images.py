@@ -41,7 +41,7 @@ html,body{{margin:0;width:1200px;height:630px;overflow:hidden}}
 <div class="hero-sky"><svg class="sun" viewBox="0 0 200 200"><use href="#sunsym"/></svg><svg class="cloud a" viewBox="0 0 200 90"><use href="#cloudsym"/></svg><svg class="kite" viewBox="0 0 120 220"><use href="#kitesym"/></svg></div>
 <div class="copy"><div class="brand"><svg viewBox="0 0 44 44"><use href="#logo"/></svg><span class="bn"><span class="b1">Adventure Child Therapy</span><span class="b2">ABA your way</span></span></div>
 <h1 style="position:relative;z-index:0">Every big adventure starts <span style="position:relative;display:inline-block;white-space:nowrap">close to home.<i style="position:absolute;left:-4px;right:-6px;bottom:.06em;height:.3em;background:#FFC845;border-radius:40% 60% 50% 45%/60% 40% 60% 40%;z-index:-1;transform:rotate(-1.2deg)"></i></span></h1>
-<span class="meta">Kids’ ABA therapy · Colorado &amp; Oklahoma · actaba.com</span></div>
+<span class="meta">Kids’ ABA therapy · Colorado, Oklahoma &amp; North Carolina · actaba.com</span></div>
 {HILLS}</div></body></html>"""
 
 async def main():
