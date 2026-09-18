@@ -17,8 +17,8 @@ def providers():
     form = f'''<form class="act" data-form="referral" data-inst="{inst}" novalidate>
       <div class="f2">{field(inst,"ref_name","Your name",required=True,auto="name")}{field(inst,"ref_org","Practice or organization",required=True,auto="organization")}</div>
       <div class="f2">{field(inst,"ref_email","Email",typ="email",required=True,auto="email")}{field(inst,"ref_phone","Phone",typ="tel",auto="tel")}</div>
-      <div class="f2">{field(inst,"ref_role","Your role",kind="select",options=["Pediatrician / physician","Diagnosing psychologist","School or district team","Case manager","SLP / OT / PT","Other"])}{field(inst,"ref_region","Family’s area",kind="select",required=True,options=["Denver metro","Grand Junction / Western Slope","Pueblo / Southern Colorado","Tulsa","Ada","Elsewhere — tell us below"])}</div>
-      <div class="f2">{field(inst,"ref_dx","Documentation",kind="select",required=True,options=["Physician letter recommending ABA (Colorado)","Diagnostic evaluation complete — report available","Evaluation in progress","Neither yet"])}{field(inst,"ref_payer","Payer",kind="select",options=["Health First Colorado","SoonerCare / SoonerSelect","Commercial","Unknown"])}</div>
+      <div class="f2">{field(inst,"ref_role","Your role",kind="select",options=["Pediatrician / physician","Diagnosing psychologist","School or district team","Case manager","SLP / OT / PT","Other"])}{field(inst,"ref_region","Family’s area",kind="select",required=True,options=["Denver metro","Grand Junction / Western Slope","Pueblo / Southern Colorado","Tulsa","Ada","Charlotte, NC","Thomasville, NC","Elsewhere — tell us below"])}</div>
+      <div class="f2">{field(inst,"ref_dx","Documentation",kind="select",required=True,options=["Physician letter recommending ABA (Colorado)","Diagnostic evaluation complete — report available","Evaluation in progress","Neither yet"])}{field(inst,"ref_payer","Payer",kind="select",options=["Health First Colorado","SoonerCare / SoonerSelect","NC Medicaid","Commercial","Unknown"])}</div>
       {field(inst,"ref_notes","Routing notes",kind="textarea",placeholder="Area, urgency, caregiver availability, and whether the family expects our call. Do not include protected health information — records are collected through a secure link.")}
       {consent(inst)}
       <div><button class="btn btn-primary" type="submit">Submit referral {ARROW}</button></div>
@@ -26,23 +26,23 @@ def providers():
     </form>'''
     glance = [
       ("Fax", '<span class="tnum">(303) 374-5911</span>'),
-      ("Colorado", CO_TEL),
+      ("Colorado &amp; North Carolina", CO_TEL),
       ("Oklahoma", OK_TEL),
-      ("Service areas", "Denver metro, Grand Junction, Pueblo, Tulsa, Ada"),
-      ("Payers", "Health First Colorado, SoonerCare and SoonerSelect, commercial plans after verification"),
+      ("Service areas", "Denver metro, Grand Junction, Pueblo, Tulsa, Ada, Charlotte, Thomasville"),
+      ("Payers", "Health First Colorado, SoonerCare and SoonerSelect, NC Medicaid, commercial plans after verification"),
     ]
     return f'''<div data-route="providers" class="pro" data-title="For providers | Adventure Child Therapy" hidden>
 {phead_pro("For referring providers", "Referral information", "For pediatricians, diagnosticians, school teams, case managers and allied health providers: what to send, how referrals are handled, and what you can expect from us after the handoff.", glance,
   [("#/providers#referral-requirements","Requirements"),("#/providers#coverage","Coverage"),("#/providers#records","Records"),("#/providers#refer","Submit a referral")])}
 
 <section class="sec" id="referral-requirements" style="scroll-margin-top:90px"><div class="wrap stack g28">
-  {sec_head("Requirements", "What to send, and what happens next", "Documentation requirements differ by state. Colorado does not require an autism diagnosis to begin ABA; Oklahoma does.")}
+  {sec_head("Requirements", "What to send, and what happens next", "Documentation requirements differ by state. Colorado does not require an autism diagnosis to begin ABA; Oklahoma and North Carolina do.")}
   <div class="grid c3">
-    <div class="card"><span class="k">Documentation</span><h3>What to send</h3>{ticks(["Colorado: a letter from the child’s physician recommending ABA — an autism diagnosis is not required to start","Oklahoma: the diagnostic evaluation report (ASD or other qualifying diagnosis)","Caregiver name and best contact number","Insurance carrier and member ID","Any prescription or order the payer requires","Relevant IEP, related-service or medical notes, where you have consent to share them"])}</div>
+    <div class="card"><span class="k">Documentation</span><h3>What to send</h3>{ticks(["Colorado: a letter from the child’s physician recommending ABA — an autism diagnosis is not required to start","Oklahoma and North Carolina: the diagnostic evaluation report (ASD or other qualifying diagnosis)","Caregiver name and best contact number","Insurance carrier and member ID","Any prescription or order the payer requires","Relevant IEP, related-service or medical notes, where you have consent to share them"])}</div>
     <div class="card"><span class="k">Our commitments</span><h3>What we do</h3>{ticks(["We contact the family directly; you do not need to follow up to complete the handoff.","If we cannot serve the family’s area or plan, we tell you promptly rather than holding the referral.","We do not give families a start date we cannot keep.","With consent, we coordinate with you: IEP meetings, progress data, and a named supervising BCBA."])}</div>
-    <div class="card"><span class="k">Limitations</span><h3>What we cannot do</h3>{ticks(["In Oklahoma, ABA cannot begin without a diagnostic evaluation on file.","ABA delivered in a school setting is not reimbursable by Medicaid except on a time-limited basis during a transition into or out of clinic.","We do not recommend hours before an assessment."], "ticks neg")}</div>
+    <div class="card"><span class="k">Limitations</span><h3>What we cannot do</h3>{ticks(["In Oklahoma and North Carolina, ABA cannot begin without a diagnostic evaluation on file.","ABA delivered in a school setting is not reimbursable by Medicaid except on a time-limited basis during a transition into or out of clinic.","We do not recommend hours before an assessment."], "ticks neg")}</div>
   </div>
-  <div class="callout"><span class="tag">Colorado</span><p class="muted"><strong>No diagnosis is required to refer.</strong> A letter from you recommending ABA is sufficient to start services. Please send the referral rather than holding it while the family waits for an evaluation. Oklahoma referrals do require a diagnostic evaluation on file.</p></div>
+  <div class="callout"><span class="tag">Colorado</span><p class="muted"><strong>No diagnosis is required to refer.</strong> A letter from you recommending ABA is sufficient to start services. Please send the referral rather than holding it while the family waits for an evaluation. Oklahoma and North Carolina referrals do require a diagnostic evaluation on file.</p></div>
 </div></section>
 
 <section class="sec band" id="coverage" style="scroll-margin-top:90px"><div class="wrap stack g28">
@@ -50,7 +50,8 @@ def providers():
   <div class="lead-list">
     <div><h4>Colorado</h4><p class="muted">Denver metro, Grand Junction and Pueblo. In-home and community-based services, including daycare and school settings where the treatment plan calls for it. Billed to Health First Colorado and commercial plans after benefit verification.</p></div>
     <div><h4>Oklahoma</h4><p class="muted">Tulsa and Tulsa County: center-based services at 1217 East 48th Street, Suite 101, plus in-home services. Ada and nearby communities: in-home services. Billed to SoonerCare, SoonerSelect plans (Aetna Better Health of Oklahoma, Blue Cross and Blue Shield of Oklahoma, Oklahoma Complete Health, Humana Healthy Horizons) and commercial plans after benefit verification.</p></div>
-    <div><h4>Outside these areas</h4><p class="muted">Please refer anyway and note the family’s location. We track unmet demand by ZIP code, and it informs where we open next, beginning with North Carolina.</p></div>
+    <div><h4>North Carolina</h4><p class="muted">Charlotte and Thomasville, with nearby communities: in-home and community-based services. Medicaid and commercial plans; we verify each family’s coverage before services start.</p></div>
+    <div><h4>Outside these areas</h4><p class="muted">Please refer anyway and note the family’s location. We track unmet demand by ZIP code, and it informs where we open next.</p></div>
   </div>
 </div></section>
 
@@ -63,7 +64,7 @@ def providers():
   <div class="card stack g14">
     <div class="lead-list" style="border-top:0">
       <div style="grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr)"><span class="k">Fax</span><span class="tnum">(303) 374-5911</span></div>
-      <div style="grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr)"><span class="k">Colorado</span><span>{CO_TEL}</span></div>
+      <div style="grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr)"><span class="k">Colorado &amp; NC</span><span>{CO_TEL}</span></div>
       <div style="grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr)"><span class="k">Oklahoma</span><span>{OK_TEL}</span></div>
       <div style="grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);border-bottom:0"><span class="k">Email</span><span><a href="mailto:info@actaba.com">info@actaba.com</a> <span class="tiny">(no clinical details)</span></span></div>
     </div>
