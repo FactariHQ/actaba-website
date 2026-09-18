@@ -6,7 +6,7 @@ from p_shared import CO_TEL, OK_TEL, ARROW
 
 SITE = "https://actaba.com"
 OUT = "dist"
-TODAY = datetime.date(2026, 9, 10).isoformat()
+TODAY = datetime.date(2026, 9, 18).isoformat()
 FONTS = "https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Lexend:wght@300;350;400;450;500;600&family=Patrick+Hand&display=swap"
 
 # ---- live intake embed replaces the review-preview card ----
@@ -16,15 +16,15 @@ def intake_live(title, lede):
   <div class="intake-embed">
     <iframe id="JotFormIFrame-231875318826061" title="ACT ABA Intake form" allow="geolocation; microphone; camera; fullscreen" src="https://form.jotform.com/231875318826061" style="min-width:100%;max-width:100%;height:900px;border:none" loading="lazy"></iframe>
   </div>
-  <p class="tiny">Rather talk to a person? Call Colorado {CO_TEL} or Oklahoma {OK_TEL}. Trouble loading the form? <a href="https://form.jotform.com/231875318826061" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+  <p class="tiny">Rather talk to a person? Call Colorado &amp; North Carolina {CO_TEL} or Oklahoma {OK_TEL}. Trouble loading the form? <a href="https://form.jotform.com/231875318826061" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
 </div>'''
 p_pages.intake_live = intake_live
 p_pages.intake_block = intake_live
 
 PAGES = [
   # key, path, fn, title, description, nav key
-  ("home", "/", p_pages.home, "Adventure Child Therapy | ABA therapy for kids in Colorado & Oklahoma",
-   "Small, clinician-led ABA therapy for kids and families — in-home across the Denver metro, Grand Junction, Pueblo and Ada, and at our Tulsa center. No autism diagnosis needed to start in Colorado.", "home"),
+  ("home", "/", p_pages.home, "Adventure Child Therapy | ABA therapy for kids in Colorado, Oklahoma & North Carolina",
+   "Small, clinician-led ABA therapy for kids and families — in-home across the Denver metro, Grand Junction, Pueblo, Ada, Charlotte and Thomasville, and at our Tulsa center. No autism diagnosis needed to start in Colorado.", "home"),
   ("families", "/families/", p_pages.families, "Getting started with ABA | Adventure Child Therapy",
    "What happens between your first call and your first session: state requirements, insurance and cost, what we ask of families, and the ACT intake form.", "families"),
   ("services", "/services/", p_pages.services, "ABA services | Adventure Child Therapy",
@@ -32,7 +32,7 @@ PAGES = [
   ("what-is-aba", "/what-is-aba/", p_pages.aba, "What is ABA? | Adventure Child Therapy",
    "Applied behavior analysis explained in plain language — what the science is, what a session looks like, and what we think is honest to promise.", "aba"),
   ("locations", "/locations/", p_pages.locations, "Locations | Adventure Child Therapy",
-   "In-home ABA across the Denver metro, Grand Junction and Pueblo, Colorado; center-based and in-home ABA in Tulsa, Oklahoma; and in-home ABA in Ada, Oklahoma.", "locations"),
+   "In-home ABA across the Denver metro, Grand Junction and Pueblo, Colorado; center-based and in-home ABA in Tulsa, Oklahoma; in-home ABA in Ada, Oklahoma; and in-home ABA in Charlotte and Thomasville, North Carolina.", "locations"),
   ("providers", "/providers/", p_pro.providers, "Referral information for providers | Adventure Child Therapy",
    "For pediatricians, diagnosticians, school teams and case managers: documentation requirements by state, coverage, secure records, and the referral form.", "providers"),
   ("careers", "/careers/", p_pro.careers, "Careers | Adventure Child Therapy",
@@ -40,7 +40,7 @@ PAGES = [
   ("about", "/about/", p_pages.about, "About us | Adventure Child Therapy",
    "A small, clinician-led ABA practice founded in 2021 — our clinical values, how we measure ourselves, and how we keep care safe and organized.", "about"),
   ("contact", "/contact/", p_pages.contact, "Contact | Adventure Child Therapy",
-   "Call Colorado (720) 432-8989 or Oklahoma (918) 764-8544, email info@actaba.com, or start intake online.", "contact"),
+   "Call Colorado & North Carolina (720) 432-8989 or Oklahoma (918) 764-8544, email info@actaba.com, or start intake online.", "contact"),
 ]
 NAV = [("/","home","Home"),("/families/","families","Families"),("/services/","services","Services"),("/what-is-aba/","aba","What is ABA"),("/locations/","locations","Locations"),("/providers/","providers","Providers"),("/careers/","careers","Careers"),("/about/","about","About"),("/contact/","contact","Contact")]
 
@@ -61,9 +61,9 @@ JSONLD = {
     {"@type": "MedicalOrganization", "@id": SITE + "/#org", "name": "Adventure Child Therapy", "alternateName": "ACT ABA",
      "url": SITE + "/", "logo": SITE + "/favicon.svg", "email": "info@actaba.com", "foundingDate": "2021",
      "medicalSpecialty": "Applied Behavior Analysis",
-     "areaServed": ["Denver metro, CO", "Grand Junction, CO", "Pueblo, CO", "Tulsa, OK", "Ada, OK"],
+     "areaServed": ["Denver metro, CO", "Grand Junction, CO", "Pueblo, CO", "Tulsa, OK", "Ada, OK", "Charlotte, NC", "Thomasville, NC"],
      "contactPoint": [
-        {"@type": "ContactPoint", "telephone": "+1-720-432-8989", "contactType": "customer service", "areaServed": "US-CO"},
+        {"@type": "ContactPoint", "telephone": "+1-720-432-8989", "contactType": "customer service", "areaServed": ["US-CO", "US-NC"]},
         {"@type": "ContactPoint", "telephone": "+1-918-764-8544", "contactType": "customer service", "areaServed": "US-OK"}]},
     {"@type": "MedicalClinic", "@id": SITE + "/locations/#tulsa", "name": "Adventure Child Therapy — Tulsa Center",
      "parentOrganization": {"@id": SITE + "/#org"}, "telephone": "+1-918-764-8544", "email": "tulsa@actaba.com",
@@ -166,11 +166,11 @@ JS = r"""
         status.className = 'form-status ok show';
         status.innerHTML = kind === 'careers'
           ? '<strong>Application received — thank you.</strong> A member of our team reviews every application, and every applicant receives a response.'
-          : '<strong>Referral received — thank you.</strong> We will contact the family and confirm the outcome with you. For anything urgent, call Colorado <a href="tel:+17204328989">(720) 432-8989</a> or Oklahoma <a href="tel:+19187648544">(918) 764-8544</a>.';
+          : '<strong>Referral received — thank you.</strong> We will contact the family and confirm the outcome with you. For anything urgent, call Colorado &amp; North Carolina <a href="tel:+17204328989">(720) 432-8989</a> or Oklahoma <a href="tel:+19187648544">(918) 764-8544</a>.';
         status.scrollIntoView({ block:'center', behavior: reduce ? 'auto':'smooth' });
       }).catch(function(){
         status.className = 'form-status warn show';
-        status.innerHTML = '<strong>That didn’t go through.</strong> Please call Colorado <a href="tel:+17204328989">(720) 432-8989</a> or Oklahoma <a href="tel:+19187648544">(918) 764-8544</a>, or email <a href="mailto:info@actaba.com">info@actaba.com</a>.';
+        status.innerHTML = '<strong>That didn’t go through.</strong> Please call Colorado &amp; North Carolina <a href="tel:+17204328989">(720) 432-8989</a> or Oklahoma <a href="tel:+19187648544">(918) 764-8544</a>, or email <a href="mailto:info@actaba.com">info@actaba.com</a>.';
       }).then(function(){ btnEl.disabled = false; btnEl.style.opacity = ''; });
     });
     f.querySelectorAll('input,select,textarea').forEach(function(el){
@@ -193,7 +193,7 @@ def header(active):
     nav = "".join(f'<a href="{h}"{CUR if k==active else ""}>{t}</a>' for h,k,t in NAV)
     return f'''<a class="skip" href="#main">Skip to content</a>
 {DEFS}
-<div class="topstrip"><div class="wrap"><span>New here? One friendly call is all it takes to get started.</span><span>Colorado {CO_TEL} · Oklahoma {OK_TEL}</span></div></div>
+<div class="topstrip"><div class="wrap"><span>New here? One friendly call is all it takes to get started.</span><span>Colorado &amp; NC {CO_TEL} · Oklahoma {OK_TEL}</span></div></div>
 <header class="hdr">
   <div class="wrap hdr-in">
     <a class="brand" href="/" aria-label="Adventure Child Therapy home">{LOGO}<span class="bn"><span class="b1">Adventure Child Therapy</span><span class="b2">ABA your way</span></span></a>
@@ -209,15 +209,15 @@ FOOTER = f'''<footer class="ftr">
     <div class="ftr-grid">
       <div class="stack g14">
         <div class="brand">{LOGO}<span class="bn"><span class="b1">Adventure Child Therapy</span><span class="b2">ABA your way</span></span></div>
-        <p class="small" style="max-width:36ch">Small, clinician-led ABA for kids and families in Colorado and Oklahoma. Growing with families since 2021.</p>
+        <p class="small" style="max-width:36ch">Small, clinician-led ABA for kids and families in Colorado, Oklahoma and North Carolina. Growing with families since 2021.</p>
       </div>
       <div class="stack g10"><h4>Families</h4><ul><li><a href="/families/">Getting started</a></li><li><a href="/services/">Services</a></li><li><a href="/what-is-aba/">What is ABA</a></li><li><a href="/families/#insurance">Insurance &amp; cost</a></li><li><a href="/families/#faq">Questions</a></li></ul></div>
-      <div class="stack g10"><h4>Locations</h4><ul><li><a href="/locations/#denver">Denver metro</a></li><li><a href="/locations/#grand-junction">Grand Junction</a></li><li><a href="/locations/#pueblo">Pueblo</a></li><li><a href="/locations/#tulsa">Tulsa Center</a></li><li><a href="/locations/#ada">Ada</a></li><li><a href="/locations/#expanding">Where we’re headed</a></li></ul></div>
+      <div class="stack g10"><h4>Locations</h4><ul><li><a href="/locations/#denver">Denver metro</a></li><li><a href="/locations/#grand-junction">Grand Junction</a></li><li><a href="/locations/#pueblo">Pueblo</a></li><li><a href="/locations/#tulsa">Tulsa Center</a></li><li><a href="/locations/#ada">Ada</a></li><li><a href="/locations/#charlotte">Charlotte</a></li><li><a href="/locations/#thomasville">Thomasville</a></li><li><a href="/locations/#expanding">Where we’re headed</a></li></ul></div>
       <div class="stack g10"><h4>Work &amp; referrals</h4><ul><li><a href="/careers/">Open roles</a></li><li><a href="/providers/">Refer a family</a></li><li><a href="/about/">About us</a></li><li><a href="/contact/">Contact</a></li></ul></div>
     </div>
     <div class="ftr-btm">
       <span>&copy; <span data-year>2026</span> Adventure Child Therapy, LLC. All rights reserved.</span>
-      <span>Colorado {CO_TEL} · Oklahoma {OK_TEL} · <a href="mailto:info@actaba.com">info@actaba.com</a></span>
+      <span>Colorado &amp; NC {CO_TEL} · Oklahoma {OK_TEL} · <a href="mailto:info@actaba.com">info@actaba.com</a></span>
     </div>
   </div>
 </footer>'''
