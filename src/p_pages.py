@@ -56,9 +56,9 @@ def home():
 <section class="hero">
   {HERO_SKY}
   <div class="wrap hero-copy">
-    <span class="hand">Kids’ ABA therapy in Colorado &amp; Oklahoma · since 2021</span>
+    <span class="hand">Kids’ ABA therapy in Colorado, Oklahoma &amp; North Carolina · since 2021</span>
     <h1>Every big adventure starts <span class="hl">close to home.</span></h1>
-    <p class="lede measure">Adventure Child Therapy is a small, clinician-led ABA practice. We meet kids where life happens — living rooms across the Denver metro, Grand Junction, Pueblo and Ada, and the playroom floor of our Tulsa center — with one technician for one child, and a BCBA who looks at your child’s progress every week.</p>
+    <p class="lede measure">Adventure Child Therapy is a small, clinician-led ABA practice. We meet kids where life happens — living rooms across the Denver metro, Grand Junction, Pueblo, Ada, Charlotte and Thomasville, and the playroom floor of our Tulsa center — with one technician for one child, and a BCBA who looks at your child’s progress every week.</p>
     <div class="cta-row">{btn("#/families#start", "Start intake")}{btn("#/what-is-aba", "What is ABA?", "secondary", arrow=False)}</div>
     <div class="chips">
       <span class="chip"><i style="background:var(--meadow)">{CHECK}</i>One-on-one at the heart</span>
@@ -79,7 +79,7 @@ def home():
   <div class="stack g14">
     <span class="hand">What we do</span>
     <h2>Therapy that happens where your child’s day happens</h2>
-    <p class="muted">In Colorado, that’s usually your home — plus daycare, school and community outings when your child’s plan calls for it. In Tulsa, it’s our center, with a whole team on site, and nearby homes too. Around Ada, it’s your home. We pick the setting because it’s where the skill needs to work, not because it’s convenient for us.</p>
+    <p class="muted">In Colorado, that’s usually your home — plus daycare, school and community outings when your child’s plan calls for it. In Tulsa, it’s our center, with a whole team on site, and nearby homes too. Around Ada, it’s your home, and around Charlotte and Thomasville, it’s your home and community. We pick the setting because it’s where the skill needs to work, not because it’s convenient for us.</p>
     <p class="muted">Behind every child: an assessment you can actually read, a technician who stays with your family, a BCBA who truly supervises, and an admin team whose whole job is keeping authorizations, schedules and claims off your plate.</p>
     <div>{go("#/services", "See all eight services")}</div>
   </div>
@@ -89,7 +89,7 @@ def home():
 <section class="sec"><div class="wrap stack g40">
   {head("The path to your first session", "Five steps, and we’ll walk every one with you", "Most families find us somewhere in the middle of this path. Wherever you are, the next step is the same: give us a call or send the form.")}
   {trail()}
-  <div class="cta-row">{btn("#/families#start", "Start intake")}<span class="muted small">or call Colorado {CO_TEL} · Oklahoma {OK_TEL}</span></div>
+  <div class="cta-row">{btn("#/families#start", "Start intake")}<span class="muted small">or call Colorado &amp; NC {CO_TEL} · Oklahoma {OK_TEL}</span></div>
 </div></section>
 
 <section class="sec band b-meadow"><div class="wrap split" style="align-items:center">
@@ -116,9 +116,9 @@ def home():
 </div></section>
 
 <section class="sec band b-sky"><div class="wrap stack g28">
-  {head("Where we work", "Five communities, two states, one standard of care")}
-  <div class="grid c5">{locs}</div>
-  <div class="note" style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:start">{ico("i-seed")}<p><strong>Coming next: North Carolina.</strong> We’re working on opening in more states, starting with North Carolina, and we choose new places based on where families struggle to find care — not where it’s easiest for us. If you can’t find an ABA provider where you live, or you’re a clinician who’d love to build a team somewhere new, we’d really like to hear from you.</p></div>
+  {head("Where we work", "Seven communities, three states, one standard of care")}
+  <div class="grid c4">{locs}</div>
+  <div class="note" style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:start">{ico("i-seed")}<p><strong>Now in North Carolina.</strong> We’ve opened in Charlotte and Thomasville, and we keep choosing new places based on where families struggle to find care — not where it’s easiest for us. If you can’t find an ABA provider where you live, or you’re a clinician who’d love to build a team somewhere new, we’d really like to hear from you.</p></div>
 </div></section>
 
 <section class="sec"><div class="wrap split">
@@ -143,7 +143,7 @@ def home():
     <div class="stack g20">
       <span class="hand">One call is all it takes</span>
       <h2 style="max-width:20ch">Tell us about your child. We’ll be honest about what comes next.</h2>
-      <div class="cta-row">{btn("#/families#start", "Start intake")}{btn("tel:+17204328989", "Colorado (720) 432-8989", "secondary", arrow=False)}{btn("tel:+19187648544", "Oklahoma (918) 764-8544", "secondary", arrow=False)}</div>
+      <div class="cta-row">{btn("#/families#start", "Start intake")}{btn("tel:+17204328989", "Colorado & NC (720) 432-8989", "secondary", arrow=False)}{btn("tel:+19187648544", "Oklahoma (918) 764-8544", "secondary", arrow=False)}</div>
     </div>
     <svg class="kite-art" viewBox="0 0 120 220" aria-hidden="true" focusable="false"><use href="#kitesym"/></svg>
   </div>
@@ -159,18 +159,19 @@ def families():
 
 <section class="sec band b-sky" id="requirements"><div class="wrap stack g28">
   {head("Before therapy starts", "What’s needed on file depends on your state", "This is the part families most often get mixed messages about, so here it is, simply.")}
-  <div class="grid c2">
+  <div class="grid c3">
     <div class="card">{mini("m-denver","Colorado mountains")}<span class="k">Colorado</span><h3>No autism diagnosis required</h3><p class="small muted">A letter from your child’s physician recommending ABA is enough to begin. If your child does have a diagnosis, please bring the report — it helps the assessment — but it isn’t a requirement.</p>{ticks(["A physician’s letter recommending ABA","Your insurance information","A caregiver who can be present for sessions and family guidance"])}</div>
     <div class="card">{mini("m-tulsa","Oklahoma prairie")}<span class="k">Oklahoma</span><h3>Diagnostic evaluation required</h3><p class="small muted">SoonerCare requires a diagnostic evaluation on file before ABA can begin. If you don’t have one yet, that’s a very normal place to start — we’ll share our referral list for evaluations and pick right back up when you have the report.</p>{ticks(["The diagnostic evaluation report","Your insurance information","Any prescription or order your plan requires"])}</div>
+    <div class="card">{mini("m-thomasville","North Carolina hills")}<span class="k">North Carolina</span><h3>Diagnostic evaluation required</h3><p class="small muted">Like Oklahoma, North Carolina needs a diagnostic evaluation on file before ABA can begin. No evaluation yet? Call us — we’ll point you to where to get one and pick right back up when you have the report.</p>{ticks(["The diagnostic evaluation report","Your insurance information","Any prescription or order your plan requires"])}</div>
   </div>
-  <p class="tiny">When we open in North Carolina, it will follow the Oklahoma pattern: a diagnostic evaluation on file first.</p>
 </div></section>
 
 <section class="sec" id="insurance"><div class="wrap stack g28">
   {head("Insurance and cost", "What this costs your family", "If your child is enrolled in Medicaid and services are authorized, ABA costs you nothing. With a commercial plan, we verify your benefits and tell you exactly what the plan said and when — no made-up estimates.")}
-  <div class="grid c2">
+  <div class="grid c3">
     <div class="card"><span class="k">Colorado</span>{ticks(["Health First Colorado (Colorado Medicaid)","Commercial plans — benefits verified before we start"])}</div>
     <div class="card"><span class="k">Oklahoma</span>{ticks(["SoonerCare (Oklahoma Medicaid)","SoonerSelect plans: Aetna Better Health of Oklahoma, Blue Cross and Blue Shield of Oklahoma, Oklahoma Complete Health, Humana Healthy Horizons","Commercial plans — benefits verified before we start"])}</div>
+    <div class="card"><span class="k">North Carolina</span>{ticks(["Medicaid and commercial plans","Call us and we’ll check your child’s coverage before we start"])}</div>
   </div>
   <div class="callout"><strong>Coordination of benefits is required</strong> when care starts, once a year, and any time your insurance changes. Please let us know the day it changes — a lapsed authorization is the most common reason therapy pauses, and it’s completely preventable.</div>
   <p class="small muted measure">If ABA isn’t covered, or you’d rather not use insurance, services are private-pay and invoiced. We’ll always tell you before we begin, never after.</p>
@@ -195,7 +196,7 @@ def families():
 </div></section>
 
 <section class="sec tight" id="start"><div class="wrap">
-  {intake_block("Start intake", f"This is the same information we’d collect on the phone. Someone from our team will call you back — forms never just sit in an inbox here. If you’d rather talk to a person right now, call Colorado {CO_TEL} or Oklahoma {OK_TEL}.")}
+  {intake_block("Start intake", f"This is the same information we’d collect on the phone. Someone from our team will call you back — forms never just sit in an inbox here. If you’d rather talk to a person right now, call Colorado &amp; North Carolina {CO_TEL} or Oklahoma {OK_TEL}.")}
 </div></section>
 </div>'''
 
@@ -274,6 +275,7 @@ def locations():
       <div>{btn("#/families#start", "Start intake here", extra="btn-sm", arrow=False)}</div></div></div>
   </article>'''
     co = f'<p class="addr">{CO_TEL}<br><a href="mailto:info@actaba.com">info@actaba.com</a></p>'
+    nc = f'<p class="addr">{NC_TEL}<br><a href="mailto:info@actaba.com">info@actaba.com</a></p>'
     rows = "".join([
       row("denver","m-denver","Mountains behind the Denver metro","Colorado","Denver metro","Our Denver care happens where your family lives. We group cases by ZIP code on purpose, so your technician spends the afternoon on your floor instead of on I-25 — and so the person who knows your child can keep working with them when schedules shift.","In-home, daycare, school and community",co,["Aurora","Westminster / Northglenn","Englewood","Castle Rock","Parker","SE Denver","Denver East"],["80011","80017","80108","80110","80138","80231","80234","80247"]),
       row("grand-junction","m-gj","Mesas of the Western Slope","Colorado","Grand Junction","On the Western Slope, ABA gets hard to find once you leave the Front Range. We staff Grand Junction as a real service area, with local technicians and BCBA supervision, and we hold the district clearances needed to work inside Mesa County Valley School District 51 and Caprock Academy.","In-home, daycare, school and community",co,["Grand Junction","Mesa County","Western Slope"]),
@@ -282,17 +284,19 @@ def locations():
           '<p class="addr">1217 East 48th Street, Suite 101<br>Tulsa, OK 74105</p><p class="addr"><a href="tel:+19187648544">(918) 764-8544</a><br><a href="mailto:tulsa@actaba.com">tulsa@actaba.com</a></p>',["Tulsa","Tulsa County"], extra='<div class="callout small">Same-day cancellations: call or text (918) 764-8544 by 6:00 a.m.</div>'),
       row("ada","m-ada","Rolling hills and oak trees around Ada, Oklahoma","Oklahoma","Ada","In-home ABA for families in and around Ada, with the same BCBA supervision and SoonerCare billing we use in Tulsa. Sessions happen in your home, where the skills need to work.","In-home",
           f'<p class="addr">{OK_TEL}<br><a href="mailto:info@actaba.com">info@actaba.com</a></p>',["Ada","Nearby communities"], extra='<div class="callout small">Same-day cancellations: call or text (918) 764-8544 by 6:00 a.m.</div>'),
+      row("charlotte","m-charlotte","The Charlotte skyline above leafy Piedmont hills","North Carolina","Charlotte","In-home ABA for families in and around Charlotte. Sessions happen in your home and out in your community, with a BCBA who reviews your child’s progress every week — the same way we work in Colorado and Oklahoma.","In-home and community",nc,["Charlotte","Mecklenburg County","Nearby communities"]),
+      row("thomasville","m-thomasville","Thomasville’s Big Chair among rolling North Carolina hills","North Carolina","Thomasville","In-home ABA for families in and around Thomasville and the Triad. Sessions happen in your home and community, where the skills need to work, with the same BCBA supervision we use everywhere else.","In-home and community",nc,["Thomasville","Davidson County","Nearby communities"]),
     ])
-    note = '<div class="note" style="max-width:62ch">In <strong>Colorado</strong>, ABA can begin with a letter from your child’s physician recommending it — no autism diagnosis required. In <strong>Oklahoma</strong>, a diagnostic evaluation needs to be on file first.</div>'
+    note = '<div class="note" style="max-width:62ch">In <strong>Colorado</strong>, ABA can begin with a letter from your child’s physician recommending it — no autism diagnosis required. In <strong>Oklahoma</strong> and <strong>North Carolina</strong>, a diagnostic evaluation needs to be on file first.</div>'
     return f'''<div data-route="locations" data-title="Locations | Adventure Child Therapy" hidden>
-{phead("Locations", "Where we work", "In-home and community care across Colorado, a center in Tulsa, in-home care around Ada, and an honest answer about the places we can’t reach yet.", extra=note)}
+{phead("Locations", "Where we work", "In-home and community care across Colorado, a center in Tulsa, in-home care around Ada, Charlotte and Thomasville, and an honest answer about the places we can’t reach yet.", extra=note)}
 <section class="sec"><div class="wrap stack" style="gap:clamp(48px,7vw,84px)">{rows}</div></section>
 <section class="sec band b-meadow" id="expanding"><div class="wrap split">
   <div class="stack g14">
     <span class="hand meadow">Growing</span>
     <h2>Where we’re headed</h2>
-    <p class="muted measure">We’re working on opening in more states, starting with North Carolina, and we choose new places based on where families struggle to find care — not where it’s easiest for us. If you can’t find an ABA provider where you live, or you’re a clinician who’d love to build a team somewhere new, we’d really like to hear from you.</p>
-    <div class="pills"><span class="pill">North Carolina</span><span class="pill">More Colorado and Oklahoma communities</span></div>
+    <p class="muted measure">We’ve just opened in North Carolina, and we’ll keep growing — choosing new places based on where families struggle to find care — not where it’s easiest for us. If you can’t find an ABA provider where you live, or you’re a clinician who’d love to build a team somewhere new, we’d really like to hear from you.</p>
+    <div class="pills"><span class="pill">More North Carolina communities</span><span class="pill">More Colorado and Oklahoma communities</span></div>
   </div>
   <div class="card stack g14">
     <h3>Not in one of our areas?</h3>
@@ -352,7 +356,7 @@ def contact():
 {phead("Contact", "Come say hello", "Our admin team answers the phones during business hours. If you reach voicemail, leave your name and number — we return calls the same business day.")}
 <section class="sec tight"><div class="wrap stack g20">
   <div class="grid c3">
-    <div class="card tint-sun">{ico("i-talk")}<span class="k">Colorado</span><h3><a href="tel:+17204328989">(720) 432-8989</a></h3><p class="small muted">New families, scheduling, authorizations and billing questions.</p></div>
+    <div class="card tint-sun">{ico("i-talk")}<span class="k">Colorado &amp; North Carolina</span><h3><a href="tel:+17204328989">(720) 432-8989</a></h3><p class="small muted">New families, scheduling, authorizations and billing questions.</p></div>
     <div class="card tint-coral">{ico("i-talk")}<span class="k">Oklahoma</span><h3><a href="tel:+19187648544">(918) 764-8544</a></h3><p class="small muted">New families, scheduling, authorizations and billing questions.</p></div>
     <div class="card tint-sky">{ico("i-letter")}<span class="k">Email</span><h3><a href="mailto:info@actaba.com">info@actaba.com</a></h3><p class="small muted">General questions. Please don’t email clinical details or records — we’ll send you a secure link.</p></div>
   </div>
