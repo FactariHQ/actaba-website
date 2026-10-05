@@ -9,9 +9,9 @@ Live at **https://actaba.com**, served by GitHub Pages from this repository.
 The site is generated from Python sources in `src/` and deployed by GitHub Actions on every push to `main`
 (`.github/workflows/deploy.yml`):
 
-1. `src/build_static.py` writes the static site to `src/dist/` — nine pages, CSS, JS, `404.html`, redirects for the old
+1. `src/build_static.py` writes the static site to `src/dist/` — nine pages plus the six-page family guide, CSS, JS, `404.html`, redirects for the old
    WordPress URLs, `sitemap.xml`, `robots.txt`, `CNAME` and the favicon.
-2. `src/render_images.py` renders the social share image (`og-image.png`) and the Apple touch icon with Playwright.
+2. `src/render_images.py` renders the social share image (`og-image.png`), the Apple touch icon, and the family-guide PDFs (`/guide/pdf/*.pdf`) with Playwright.
 3. `actions/deploy-pages` publishes `src/dist/`.
 
 | File | What it holds |
@@ -21,6 +21,7 @@ The site is generated from Python sources in `src/` and deployed by GitHub Actio
 | `src/p_shared.py` | Shared content: intake steps, FAQs, services, clinical values, pillars, benefits, locations, form helpers |
 | `src/p_pages.py` | Family-facing pages: home, families, services, what is ABA, locations, about, contact |
 | `src/p_pro.py` | Providers and Careers pages |
+| `src/p_guide.py` | New-family guide (`/guide/` hub + five reads). All copy lives in `GUIDES`; the same data drives the web pages, the print/PDF layout and the Markdown team copy (`to_markdown`) |
 | `src/build_static.py` | Page shell, SEO metadata, JSON-LD, form wiring, legacy redirects, sitemap |
 | `src/render_images.py` | Share image and touch icon renderer |
 
@@ -56,3 +57,10 @@ health information.
 - Colorado does not require an autism diagnosis to start ABA (physician letter is enough); Oklahoma and North Carolina do.
 - Expansion markets listed publicly: North Carolina only.
 - No software vendor names, no parent partner names, and no pay figures on the public site.
+
+## Family guide
+
+`/guide/` is a hub for families who have just reached out, with five short reads: `/guide/what-is-aba/`, `/guide/how-it-works/`,
+`/guide/a-session/`, `/guide/the-assessment/`, `/guide/your-part/`. Each page has a Download PDF link; `/guide/pdf/act-family-guide.pdf`
+is all five in one file (rendered from the unlinked, noindex `/guide/print/` page). PDFs are regenerated on every deploy, so edit the copy in
+`src/p_guide.py` and push — the pages and PDFs update together.
