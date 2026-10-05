@@ -4,7 +4,7 @@ Needs Playwright (Chromium) and the three Fontsource packages unpacked into
 FONTS_DIR (default: ../fonts), e.g.
   npm pack @fontsource/baloo-2@5.3.0 @fontsource/lexend@5.3.0 @fontsource/patrick-hand@5.3.0
 """
-import asyncio, os, pathlib, tempfile
+import asyncio, os, pathlib, tempfile, threading, functools, http.server, socketserver
 from playwright.async_api import async_playwright
 from p_css import CSS
 from p_art import DEFS, HILLS
@@ -66,5 +66,35 @@ async def main():
             await b.close()
     print("rendered og-image.png and apple-touch-icon.png")
 
+GUIDE_PDFS = [("what-is-aba", "what-is-aba"), ("how-it-works", "how-it-works"), ("a-session", "a-session"),
+              ("the-assessment", "the-assessment"), ("your-part", "your-part"), ("print", "act-family-guide")]
+
+def serve_dist():
+    class Quiet(http.server.SimpleHTTPRequestHandler):
+        def log_message(self, *a): pass
+    handler = functools.partial(Quiet, directory=str(DIST))
+    srv = socketserver.TCPServer(("127.0.0.1", 0), handler)
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
+    return srv
+
+async def guide_pdfs():
+    """Print each family-guide page (and the all-in-one page) to PDF in dist/guide/pdf/."""
+    out = DIST / "guide" / "pdf"; out.mkdir(parents=True, exist_ok=True)
+    srv = serve_dist(); port = srv.server_address[1]
+    try:
+        async with async_playwright() as p:
+            b = await p.chromium.launch()
+            pg = await b.new_page()
+            for path, name in GUIDE_PDFS:
+                await pg.goto(f"http://127.0.0.1:{port}/guide/{path}/", wait_until="networkidle")
+                await pg.evaluate("document.fonts.ready")
+                await pg.emulate_media(media="print", color_scheme="light")
+                await pg.pdf(path=str(out / f"{name}.pdf"), format="Letter", print_background=True, prefer_css_page_size=True)
+            await b.close()
+    finally:
+        srv.shutdown()
+    print("rendered", len(GUIDE_PDFS), "guide PDFs")
+
 if __name__ == "__main__":
     asyncio.run(main())
+    asyncio.run(guide_pdfs())
