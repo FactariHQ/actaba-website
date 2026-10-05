@@ -23,7 +23,10 @@ The site is generated from Python sources in `src/` and deployed by GitHub Actio
 | `src/p_pro.py` | Providers and Careers pages |
 | `src/p_guide.py` | New-family guide (`/guide/` hub + five reads). All copy lives in `GUIDES`; the same data drives the web pages, the print/PDF layout and the Markdown team copy (`to_markdown`) |
 | `src/build_static.py` | Page shell, SEO metadata, JSON-LD, form wiring, legacy redirects, sitemap |
-| `src/render_images.py` | Share image and touch icon renderer |
+| `src/render_images.py` | Share image, touch icon and guide PDF renderer; also calls `render_videos.build_media()` |
+| `src/p_learn.py` | Family micro-course content: narration, captions and on-screen visuals for the five videos (`LESSONS`) |
+| `src/p_learnpages.py` | `/learn/` hub and the five watch pages (`/learn/1/` … `/learn/5/`) |
+| `src/render_videos.py` | Renders the micro-course MP4s: Kokoro TTS narration (voice `af_heart`), burned-in captions, paper-cut animation |
 
 ## Editing locally
 
@@ -64,3 +67,21 @@ health information.
 `/guide/a-session/`, `/guide/the-assessment/`, `/guide/your-part/`. Each page has a Download PDF link; `/guide/pdf/act-family-guide.pdf`
 is all five in one file (rendered from the unlinked, noindex `/guide/print/` page). PDFs are regenerated on every deploy, so edit the copy in
 `src/p_guide.py` and push — the pages and PDFs update together.
+
+## Family micro-course videos
+
+`/learn/` holds five one-minute vertical videos (720×1280, captioned, AI-narrated) texted to Colorado families after intake;
+short links are `actaba.com/learn/1` … `actaba.com/learn/5`. The narration, captions and visuals all come from `LESSONS` in
+`src/p_learn.py`.
+
+On each deploy `render_images.py` calls `render_videos.build_media()`. It hashes the video inputs (`p_learn.py`,
+`render_videos.py`, `p_art.py`, `p_css.py`, voice, speed, fps, size) and compares that hash with
+`https://actaba.com/learn/media/lessons.json`. If nothing changed, it downloads the live videos (seconds). If anything
+changed, it installs `kokoro-onnx`, downloads the open Kokoro-82M model files (Apache-2.0) and re-renders all five
+(about 15 minutes). Edit the words in `p_learn.py`, push, and the videos, captions (`.vtt`) and posters regenerate.
+
+Render locally: `python3 render_videos.py --force` (all) or `python3 render_videos.py 3` (one lesson). Model files go in
+`../tts/` (git-ignored).
+
+The texting itself runs outside this repo: the "ACT Parent Texts — Colorado" Google Sheet (sequence, families, log) with
+its Apps Script engine, sent daily from the clinic Google Voice line.
