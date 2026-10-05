@@ -326,7 +326,7 @@ def about():
   <div class="stack g20">
     <div class="card tint-sun stack g14"><span class="k">Our clinical values</span>{vals}</div>
     <div class="card stack g14"><span class="k">How we treat each other</span>{treat_html}</div>
-    <div class="card stack g10">{ico("i-shield")}<h4>Training and safety</h4><p class="small muted">Clinical staff complete Safety-Care (QBS) training before working with a child, and recertify on schedule. Physical management is a last resort with three conditions — imminent risk of serious harm, greater risk in not acting, and no other practical way to prevent it — and it’s documented every time.</p></div>
+    <div class="card stack g10">{ico("i-shield")}<h4>Training and safety</h4><p class="small muted">Clinical staff are trained before working with a child, and that training stays current. Physical management is a last resort with three conditions — imminent risk of serious harm, greater risk in not acting, and no other practical way to prevent it — and it’s documented every time.</p></div>
   </div>
 </div></section>
 <section class="sec band b-sky"><div class="wrap stack g28">
