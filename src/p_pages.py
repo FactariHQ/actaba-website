@@ -249,7 +249,7 @@ def aba():
   <div class="stack g14">
     <span class="hand sky">Ethics and oversight</span>
     <h2>Who is responsible for your child’s program</h2>
-    <p class="muted">Programs are designed and supervised by a Board Certified Behavior Analyst (BCBA) practicing under the BACB’s ethics code, alongside the standards of ABAI and APBA. Technicians are certified — or actively working toward the RBT credential with our support — and every clinical team member is trained in Safety-Care (QBS) crisis procedures before working with a child.</p>
+    <p class="muted">Programs are designed and supervised by a Board Certified Behavior Analyst (BCBA) practicing under the BACB’s ethics code, alongside the standards of ABAI and APBA. Technicians are certified — or actively working toward the RBT credential with our support.</p>
     <p class="muted">You can ask at any time who supervises your child’s program, when they last observed a session, and what the data says. Those aren’t special requests — they’re just good questions.</p>
   </div>
   <div class="stack g14">
