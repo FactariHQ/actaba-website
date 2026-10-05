@@ -71,7 +71,7 @@ FAQ_MORE = [
   ("What if we need to cancel a session?",
    "Life happens! Give us as much notice as you can, and at least two weeks for planned vacations. Same-day cancellations should reach us by 6:00 a.m. by call or text, so we can rework your technician’s day."),
   ("Who actually works with my child?",
-   "A behavior technician or RBT runs the sessions, supervised by the BCBA who wrote the plan. Our technicians are trained in Safety-Care (QBS) crisis procedures and are certified or actively working toward certification."),
+   "A behavior technician or RBT runs the sessions, supervised by the BCBA who wrote the plan. Our technicians are certified or actively working toward certification."),
   ("Why don’t you post parent reviews?",
    "Because your child’s progress is private, and it belongs to your family — not our marketing page. Instead, ask us to walk you through the data on a program. We’re always happy to show you."),
 ]
@@ -133,7 +133,7 @@ def pillars():
 
 BENEFITS = [
   ("Paid time off and paid sick time", "Accrued, and actually usable."),
-  ("Paid training", "Including Safety-Care (QBS) crisis-procedure certification."),
+  ("Paid training", "Onboarding and ongoing training happen on the clock."),
   ("Certification reimbursement", "We reimburse RBT, BCaBA and BCBA exam costs."),
   ("Mileage reimbursement", "For Colorado in-home roles. Drive time isn’t paid hourly, and we tell you that on the first screening call rather than at the offer."),
   ("Professional development", "CEU support and a clear path from BT to RBT to Lead RBT to full-time and beyond."),
