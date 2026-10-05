@@ -141,12 +141,12 @@ GUIDES = [
  "card": "The first few weeks, a sample session from hello to goodbye, and where you fit in.",
  "lede": "Most families are surprised by how much an ABA session looks like play. Here’s what to expect, so nothing on day one feels strange.",
  "short": [
-   "The first few weeks are mostly about your child and their technician becoming friends. That’s on purpose.",
+   "The first few weeks are mostly about building trust between your child and their technician. That’s on purpose.",
    "Sessions mix play, short bursts of practice, breaks and everyday routines — wherever the skill needs to work.",
-   "The technician tells you how it went before they leave. Your BCBA visits regularly to supervise and adjust.",
+   "The technician collects data throughout the session and updates your child’s record. Your BCBA visits regularly to supervise and adjust.",
  ],
  "sections": [
-  {"id": "first-weeks", "hand": "The first few weeks", "title": "First, they become someone your child likes",
+  {"id": "first-weeks", "hand": "The first few weeks", "title": "First, we build trust",
    "intro": "Early sessions focus on <strong>pairing</strong>: the technician spends time doing your child’s favorite things, follows their lead, and asks very little. It can look like “just playing.” It’s actually the foundation for everything else — kids learn best from people they trust and enjoy.",
    "blocks": [
      ("note", "<strong>Good to know:</strong> it’s normal for a child to be shy, upset or unsure at first. Technicians are trained for this. Give it a few sessions, and tell us if it isn’t getting easier."),
@@ -160,7 +160,7 @@ GUIDES = [
        ("Learning", "Teaching woven into play", "Most teaching happens inside activities your child enjoys — asking for a turn, naming the toy, taking turns, following a direction during a game."),
        ("Practice", "Short, focused bursts", "Quick rounds of practice on specific skills, with lots of encouragement and a break or favorite activity right after."),
        ("Routines", "Real-life skills", "Practice on whatever matters at your house: washing hands, snack time, getting shoes on, waiting, cleaning up, moving from one activity to the next."),
-       ("Wrap-up", "How it went", "Before leaving, the technician gives you a quick rundown: what went well, anything that was hard, and anything to try before next time."),
+       ("Wrap-up", "Data and notes", "Before leaving, the technician finishes collecting the session’s data and updates your child’s record, so your BCBA can see exactly how it went."),
      ]),
    ]},
   {"id": "see", "hand": "What you might notice", "title": "Things that can look odd at first — and why we do them",
