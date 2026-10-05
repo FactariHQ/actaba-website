@@ -237,7 +237,7 @@ def aba():
   <div class="stack g20">
     <div class="card tint-sun stack g10">
       <span class="k">A session, step by step</span>
-      {ticks(["A technician arrives at your home, daycare or our Tulsa center at the scheduled time.","They run the programs your BCBA wrote — mostly through play, motivation and everyday opportunities.","They take data as they go: what needed help, what your child did on their own, and what happened around any challenging behavior.","They tell you how it went before they leave.","Your BCBA reviews the data between sessions and adjusts the plan."])}
+      {ticks(["A technician arrives at your home, daycare or our Tulsa center at the scheduled time.","They run the programs your BCBA wrote — mostly through play, motivation and everyday opportunities.","They take data as they go: what needed help, what your child did on their own, and what happened around any challenging behavior.","Before they leave, they finish collecting data and update your child’s record.","Your BCBA reviews the data between sessions and adjusts the plan."])}
     </div>
     <div class="card tint-coral stack g10">
       <span class="k">Things we’ll never tell you</span>
