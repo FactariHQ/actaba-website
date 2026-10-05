@@ -1,12 +1,15 @@
 import re, os, json, shutil, datetime
-import p_shared, p_pages, p_pro
+import p_shared, p_pages, p_pro, p_guide
 from p_css import CSS
 from p_art import DEFS, LOGO
 from p_shared import CO_TEL, OK_TEL, NC_TEL, ARROW
 
+_families = p_pages.families
+p_pages.families = lambda: p_guide.add_promo(_families())
+
 SITE = "https://actaba.com"
 OUT = "dist"
-TODAY = datetime.date(2026, 9, 18).isoformat()
+TODAY = datetime.date(2026, 10, 5).isoformat()
 FONTS = "https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Lexend:wght@300;350;400;450;500;600&family=Patrick+Hand&display=swap"
 
 # ---- live intake embed replaces the review-preview card ----
@@ -41,6 +44,11 @@ PAGES = [
    "A small, clinician-led ABA practice founded in 2021 — our clinical values, how we measure ourselves, and how we keep care safe and organized.", "about"),
   ("contact", "/contact/", p_pages.contact, "Contact | Adventure Child Therapy",
    "Call Colorado (720) 432-8989, Oklahoma (918) 764-8544 or North Carolina (336) 270-9453, email info@actaba.com, or start intake online.", "contact"),
+  ("guide", "/guide/", p_guide.hub, "Your family guide | Adventure Child Therapy",
+   "Five short reads for families starting ABA with ACT: what ABA is, how it works, what a session looks like, what happens at the assessment, and what we ask of families.", "families"),
+] + [
+  (f"guide-{g['slug']}", f"/guide/{g['slug']}/", p_guide.page_fn(g), f"{re.sub('<[^>]+>', '', g['title'])} | ACT family guide",
+   re.sub('<[^>]+>', '', g["card"]), "families") for g in p_guide.GUIDES
 ]
 NAV = [("/","home","Home"),("/families/","families","Families"),("/services/","services","Services"),("/what-is-aba/","aba","What is ABA"),("/locations/","locations","Locations"),("/providers/","providers","Providers"),("/careers/","careers","Careers"),("/about/","about","About"),("/contact/","contact","Contact")]
 
@@ -88,6 +96,8 @@ JS = r"""
     });
     document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && navEl.classList.contains('open')) { btn.click(); btn.focus(); } });
   }
+
+  document.querySelectorAll('[data-print]').forEach(function(b){ b.addEventListener('click', function(){ window.print(); }); });
 
   /* Jotform intake: resize the iframe to its content */
   if (window.jotformEmbedHandler) {
@@ -213,7 +223,7 @@ FOOTER = f'''<footer class="ftr">
         <div class="brand">{LOGO}<span class="bn"><span class="b1">Adventure Child Therapy</span><span class="b2">ABA your way</span></span></div>
         <p class="small" style="max-width:36ch">Small, clinician-led ABA for kids and families in Colorado, Oklahoma and North Carolina. Growing with families since 2021.</p>
       </div>
-      <div class="stack g10"><h4>Families</h4><ul><li><a href="/families/">Getting started</a></li><li><a href="/services/">Services</a></li><li><a href="/what-is-aba/">What is ABA</a></li><li><a href="/families/#insurance">Insurance &amp; cost</a></li><li><a href="/families/#faq">Questions</a></li></ul></div>
+      <div class="stack g10"><h4>Families</h4><ul><li><a href="/families/">Getting started</a></li><li><a href="/guide/">Family guide</a></li><li><a href="/services/">Services</a></li><li><a href="/what-is-aba/">What is ABA</a></li><li><a href="/families/#insurance">Insurance &amp; cost</a></li><li><a href="/families/#faq">Questions</a></li></ul></div>
       <div class="stack g10"><h4>Locations</h4><ul><li><a href="/locations/#denver">Denver metro</a></li><li><a href="/locations/#grand-junction">Grand Junction</a></li><li><a href="/locations/#pueblo">Pueblo</a></li><li><a href="/locations/#tulsa">Tulsa Center</a></li><li><a href="/locations/#ada">Ada</a></li><li><a href="/locations/#charlotte">Charlotte</a></li><li><a href="/locations/#thomasville">Thomasville</a></li><li><a href="/locations/#expanding">Where we’re headed</a></li></ul></div>
       <div class="stack g10"><h4>Work &amp; referrals</h4><ul><li><a href="/careers/">Open roles</a></li><li><a href="/providers/">Refer a family</a></li><li><a href="/about/">About us</a></li><li><a href="/contact/">Contact</a></li></ul></div>
     </div>
@@ -270,7 +280,7 @@ def doc(path, title, desc, body_html, active, pro=False, jsonld=None, jotform=Fa
 def build():
     if os.path.exists(OUT): shutil.rmtree(OUT)
     os.makedirs(OUT + "/assets")
-    open(OUT + "/assets/site.css", "w").write(CSS + EXTRA_CSS)
+    open(OUT + "/assets/site.css", "w").write(CSS + EXTRA_CSS + p_guide.GUIDE_CSS)
     open(OUT + "/assets/site.js", "w").write(JS)
     for key, path, fn, title, desc, active in PAGES:
         body = fix_links(strip_route(fn()))
@@ -280,6 +290,10 @@ def build():
         html = doc(path, title, desc, body, active, pro=(key in ("providers", "careers")),
                    jsonld=JSONLD if key == "home" else None, jotform=(key in ("families", "contact")))
         open(d + "index.html", "w").write(html)
+    # combined printable guide (source for the all-in-one PDF; not linked or indexed)
+    os.makedirs(OUT + "/guide/print", exist_ok=True)
+    open(OUT + "/guide/print/index.html", "w").write(doc("/guide/print/", "ACT family guide — all five | Adventure Child Therapy",
+        "All five ACT family guides on one printable page.", p_guide.print_all(), "families", noindex=True))
     # 404
     nf = f'''<section class="phead"><div class="hero-sky" aria-hidden="true"><svg class="sun" viewBox="0 0 200 200" focusable="false"><use href="#sunsym"/></svg></div>
   <div class="wrap stack g14 nf"><span class="hand">Page not found</span><h1>This page wandered off the trail.</h1>
