@@ -101,7 +101,7 @@ JOBS_PRO = [
   ("rbt-tulsa","Behavior Technician / RBT","Tulsa · Center-based","Full-time and part-time",
    "Hourly for full-time and part-time, on set shifts at our Tulsa center. The rate is provided on the first screening call.",
    "Center-based work on scheduled shifts, alongside an on-site clinical team.",
-   ["Set shifts at the center, with no driving between family homes","On-site team, with Lead RBTs leading onboarding","Paid training, including Safety-Care certification","Spanish-speaking candidates especially encouraged to apply"]),
+   ["Set shifts at the center, with no driving between family homes","On-site team, with Lead RBTs leading onboarding","Paid training","Spanish-speaking candidates especially encouraged to apply"]),
   ("bcba","Board Certified Behavior Analyst (BCBA)","Denver · Grand Junction · Tulsa","Full-time",
    "Competitive compensation, discussed directly on the first call.",
    "A caseload sized for meaningful supervision, dedicated administrative support, and a leadership team with direct clinic operations experience.",
@@ -132,7 +132,7 @@ def careers():
     pil = '<div class="grid c4">' + "".join(f'<div class="card"><h3>{t}</h3><p class="small muted">{d}</p></div>' for t, d, _ in PILLARS) + '</div>'
     ben = "".join(f'<div class="card"><h4>{t}</h4><p class="small muted">{d}</p></div>' for t, d in [
       ("Paid time off and paid sick time", "Accrued and usable."),
-      ("Paid training", "Including Safety-Care (QBS) crisis-procedure certification."),
+      ("Paid training", "Onboarding and ongoing training happen on the clock."),
       ("Certification reimbursement", "RBT, BCaBA and BCBA exam costs are reimbursed."),
       ("Mileage reimbursement", "For Colorado in-home roles. Drive time is not paid hourly, and we disclose this on the first screening call."),
       ("Professional development", "CEU support and a defined pathway from BT to RBT to Lead RBT and full-time roles."),
