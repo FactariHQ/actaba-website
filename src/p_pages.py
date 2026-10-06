@@ -58,7 +58,7 @@ def home():
   <div class="wrap hero-copy">
     <span class="hand">Kids’ ABA therapy in Colorado, Oklahoma &amp; North Carolina · since 2021</span>
     <h1>Every big adventure starts <span class="hl">close to home.</span></h1>
-    <p class="lede measure">Adventure Child Therapy is a small, clinician-led ABA practice. We meet kids where life happens — living rooms across the Denver metro, Grand Junction, Pueblo, Ada, Charlotte and Thomasville, and the playroom floor of our Tulsa center — with one technician for one child, and a BCBA who looks at your child’s progress every week.</p>
+    <p class="lede measure">Adventure Child Therapy is a small, clinician-led ABA practice. We meet kids where life happens — living rooms across the Denver metro, Grand Junction, Pueblo, Ada, Charlotte and Thomasville, and the playroom floor of our Tulsa center — with one technician for one child, and a Board Certified Behavior Analyst who looks at your child’s progress every week.</p>
     <div class="cta-row">{btn("#/families#start", "Start intake")}{btn("#/what-is-aba", "What is ABA?", "secondary", arrow=False)}</div>
     <div class="chips">
       <span class="chip"><i style="background:var(--meadow)">{CHECK}</i>One-on-one at the heart</span>
@@ -80,7 +80,7 @@ def home():
     <span class="hand">What we do</span>
     <h2>Therapy that happens where your child’s day happens</h2>
     <p class="muted">In Colorado, that’s usually your home — plus daycare, school and community outings when your child’s plan calls for it. In Tulsa, it’s our center, with a whole team on site, and nearby homes too. Around Ada, it’s your home, and around Charlotte and Thomasville, it’s your home and community. We pick the setting because it’s where the skill needs to work, not because it’s convenient for us.</p>
-    <p class="muted">Behind every child: an assessment you can actually read, a technician who stays with your family, a BCBA who truly supervises, and an admin team whose whole job is keeping authorizations, schedules and claims off your plate.</p>
+    <p class="muted">Behind every child: an assessment you can actually read, a technician who stays with your family, a Board Certified Behavior Analyst who truly supervises, and an admin team whose whole job is keeping authorizations, schedules and claims off your plate.</p>
     <div>{go("#/services", "See all eight services")}</div>
   </div>
   <div class="grid c2" style="gap:14px">{tiles}</div>
@@ -94,10 +94,10 @@ def home():
 
 <section class="sec band b-meadow"><div class="wrap split" style="align-items:center">
   <div class="stack g20">
-    {head("How you’ll know it’s working", "We watch the little wins add up", "Your technician records data during every session, and your BCBA reviews it every week. When a program isn’t moving, we change it within weeks — not at the next six-month review. Ask to see the graphs anytime. We love that question.", hand_cls="meadow")}
+    {head("How you’ll know it’s working", "We watch the little wins add up", "Your technician records data during every session, and your Board Certified Behavior Analyst reviews it every week. When a program isn’t moving, we change it within weeks — not at the next six-month review. Ask to see the graphs anytime. We love that question.", hand_cls="meadow")}
     <div class="card soft stack g10" style="border-color:transparent">
       <h3>Why you won’t find parent reviews here</h3>
-      <p class="small muted">Your child’s progress is private, and it belongs to your family — not our marketing. Instead, we’ll introduce you to the BCBA who would supervise your child, walk you through how progress is tracked, and give you a straight answer about whether we can staff your ZIP code.</p>
+      <p class="small muted">Your child’s progress is private, and it belongs to your family — not our marketing. Instead, we’ll introduce you to the Board Certified Behavior Analyst who would supervise your child, walk you through how progress is tracked, and give you a straight answer about whether we can staff your ZIP code.</p>
       <p class="small muted">Want to talk with another family? Just ask. We’ll reach out to them, with their permission and on their terms.</p>
     </div>
   </div>
@@ -126,7 +126,7 @@ def home():
     <span class="hand meadow">Working here</span>
     <h2>A job where you’re supported, too</h2>
     <p class="muted">In Colorado, our full-time in-home technicians are salaried, not hourly — so a family’s cancellation doesn’t shrink your paycheck, and billable hours above your base are paid on top. We group cases by ZIP code, reimburse mileage, and tell you on the very first call that drive time isn’t paid hourly, because you deserve to know that before an offer, not after. At our Tulsa center, technicians are hourly and work set shifts alongside the team on site.</p>
-    <div class="pills"><span class="pill">Denver metro</span><span class="pill">Grand Junction</span><span class="pill">Tulsa</span><span class="pill">BCBA roles</span></div>
+    <div class="pills"><span class="pill">Denver metro</span><span class="pill">Grand Junction</span><span class="pill">Tulsa</span><span class="pill">Board Certified Behavior Analyst roles</span></div>
     <div>{btn("#/careers", "See open roles", "secondary")}</div>
   </div>
   <div class="grid" style="gap:14px">{ben}</div>
@@ -207,14 +207,14 @@ def services():
     <div class="stack g14"><p class="muted measure">{body}</p>{ticks(items)}</div>
   </article>''' for sid, ic, name, short, tag, body, items in SERVICES)
     return f'''<div data-route="services" data-title="Services | Adventure Child Therapy" hidden>
-{phead("Services", "How we help kids grow", "Eight ways we can help, one approach: get to know your child first, deliver one-on-one hours with a technician who stays with your family, and have a BCBA guide it all using real progress data instead of guesswork.", anchors)}
+{phead("Services", "How we help kids grow", "Eight ways we can help, one approach: get to know your child first, deliver one-on-one hours with a technician who stays with your family, and have a Board Certified Behavior Analyst guide it all using real progress data instead of guesswork.", anchors)}
 <section class="sec"><div class="wrap">{rows}</div></section>
 <section class="sec tight"><div class="wrap">
   <div class="cta">
     <div class="stack g14">
       <span class="hand">Not sure what your child needs?</span>
       <h2 style="max-width:22ch">Most families aren’t — and that’s okay.</h2>
-      <p class="muted measure">That’s what the assessment is for. You tell us what your days actually look like, the BCBA suggests goals, and you read them before anything is final.</p>
+      <p class="muted measure">That’s what the assessment is for. You tell us what your days actually look like, the Board Certified Behavior Analyst suggests goals, and you read them before anything is final.</p>
       <div>{btn("#/families#start", "Start intake")}</div>
     </div>
     <svg class="kite-art" viewBox="0 0 120 220" aria-hidden="true" focusable="false"><use href="#kitesym"/></svg>
@@ -237,7 +237,7 @@ def aba():
   <div class="stack g20">
     <div class="card tint-sun stack g10">
       <span class="k">A session, step by step</span>
-      {ticks(["A technician arrives at your home, daycare or our Tulsa center at the scheduled time.","They run the programs your BCBA wrote — mostly through play, motivation and everyday opportunities.","They take data as they go: what needed help, what your child did on their own, and what happened around any challenging behavior.","Before they leave, they finish collecting data and update your child’s record.","Your BCBA reviews the data between sessions and adjusts the plan."])}
+      {ticks(["A technician arrives at your home, daycare or our Tulsa center at the scheduled time.","They run the programs your Board Certified Behavior Analyst wrote — mostly through play, motivation and everyday opportunities.","They take data as they go: what needed help, what your child did on their own, and what happened around any challenging behavior.","Before they leave, they finish collecting data and update your child’s record.","Your Board Certified Behavior Analyst reviews the data between sessions and adjusts the plan."])}
     </div>
     <div class="card tint-coral stack g10">
       <span class="k">Things we’ll never tell you</span>
@@ -249,14 +249,14 @@ def aba():
   <div class="stack g14">
     <span class="hand sky">Ethics and oversight</span>
     <h2>Who is responsible for your child’s program</h2>
-    <p class="muted">Programs are designed and supervised by a Board Certified Behavior Analyst (BCBA) practicing under the BACB’s ethics code, alongside the standards of ABAI and APBA. Technicians are certified — or actively working toward the RBT credential with our support.</p>
+    <p class="muted">Programs are designed and supervised by a Board Certified Behavior Analyst practicing under the BACB’s ethics code, alongside the standards of ABAI and APBA. Technicians are certified — or actively working toward the RBT credential with our support.</p>
     <p class="muted">You can ask at any time who supervises your child’s program, when they last observed a session, and what the data says. Those aren’t special requests — they’re just good questions.</p>
   </div>
   <div class="stack g14">
-    <div class="card stack g10">{ico("i-home")}<h3>Caregivers are part of the team</h3><p class="small muted">Your BCBA coaches you on building skills and on responding to challenging behavior, because consistency across people and places is what helps a skill stick. Insurance requires a minimum of two hours a month.</p></div>
+    <div class="card stack g10">{ico("i-home")}<h3>Caregivers are part of the team</h3><p class="small muted">Your Board Certified Behavior Analyst coaches you on building skills and on responding to challenging behavior, because consistency across people and places is what helps a skill stick. Insurance requires a minimum of two hours a month.</p></div>
     <div class="card stack g10">
       <span class="k">Where the data goes</span>
-      {ticks(["<strong>Session data, captured live.</strong> Data is recorded during the session, not pieced together from memory afterward, and your BCBA reviews it between sessions.","<strong>Documentation and oversight.</strong> Notes, treatment plans and supervision records live in HIPAA-compliant clinical software, not in someone’s inbox.","<strong>Scheduling, authorizations and billing.</strong> Coverage, prior authorizations and claims run through secure systems our admin team watches closely, so lapses get caught before they interrupt therapy."])}
+      {ticks(["<strong>Session data, captured live.</strong> Data is recorded during the session, not pieced together from memory afterward, and your Board Certified Behavior Analyst reviews it between sessions.","<strong>Documentation and oversight.</strong> Notes, treatment plans and supervision records live in HIPAA-compliant clinical software, not in someone’s inbox.","<strong>Scheduling, authorizations and billing.</strong> Coverage, prior authorizations and claims run through secure systems our admin team watches closely, so lapses get caught before they interrupt therapy."])}
       <p class="tiny">All HIPAA-compliant. Ask us anything about how your child’s information is stored and who can see it.</p>
     </div>
   </div>
@@ -278,14 +278,14 @@ def locations():
     nc = f'<p class="addr">{NC_TEL}<br><a href="mailto:info@actaba.com">info@actaba.com</a></p>'
     rows = "".join([
       row("denver","m-denver","Mountains behind the Denver metro","Colorado","Denver metro","Our Denver care happens where your family lives. We group cases by ZIP code on purpose, so your technician spends the afternoon on your floor instead of on I-25 — and so the person who knows your child can keep working with them when schedules shift.","In-home, daycare, school and community",co,["Aurora","Westminster / Northglenn","Englewood","Castle Rock","Parker","SE Denver","Denver East"],["80011","80017","80108","80110","80138","80231","80234","80247"]),
-      row("grand-junction","m-gj","Mesas of the Western Slope","Colorado","Grand Junction","On the Western Slope, ABA gets hard to find once you leave the Front Range. We staff Grand Junction as a real service area, with local technicians and BCBA supervision, and we hold the district clearances needed to work inside Mesa County Valley School District 51 and Caprock Academy.","In-home, daycare, school and community",co,["Grand Junction","Mesa County","Western Slope"]),
+      row("grand-junction","m-gj","Mesas of the Western Slope","Colorado","Grand Junction","On the Western Slope, ABA gets hard to find once you leave the Front Range. We staff Grand Junction as a real service area, with local technicians and Board Certified Behavior Analyst supervision, and we hold the district clearances needed to work inside Mesa County Valley School District 51 and Caprock Academy.","In-home, daycare, school and community",co,["Grand Junction","Mesa County","Western Slope"]),
       row("pueblo","m-pueblo","A river valley in southern Colorado","Colorado","Pueblo","In-home care for families in and around Pueblo, with the same supervision model we use in Denver and Grand Junction.","In-home and community",co,["Pueblo","Southern Colorado"]),
       row("tulsa","m-tulsa","Our Tulsa center on the prairie","Oklahoma","Tulsa Center","Our Tulsa center is a purpose-built space for kids — room to move, a kitchen for feeding and mealtime work, and a whole team on site. Families send a lunch, a change of clothes and a water bottle; we take care of the rest. We also see Tulsa-area families in their homes.","Center-based and in-home",
           '<p class="addr">1217 East 48th Street, Suite 101<br>Tulsa, OK 74105</p><p class="addr"><a href="tel:+19187648544">(918) 764-8544</a><br><a href="mailto:tulsa@actaba.com">tulsa@actaba.com</a></p>',["Tulsa","Tulsa County"], extra='<div class="callout small">Same-day cancellations: call or text (918) 764-8544 by 6:00 a.m.</div>'),
-      row("ada","m-ada","Rolling hills and oak trees around Ada, Oklahoma","Oklahoma","Ada","In-home ABA for families in and around Ada, with the same BCBA supervision and SoonerCare billing we use in Tulsa. Sessions happen in your home, where the skills need to work.","In-home",
+      row("ada","m-ada","Rolling hills and oak trees around Ada, Oklahoma","Oklahoma","Ada","In-home ABA for families in and around Ada, with the same Board Certified Behavior Analyst supervision and SoonerCare billing we use in Tulsa. Sessions happen in your home, where the skills need to work.","In-home",
           f'<p class="addr">{OK_TEL}<br><a href="mailto:info@actaba.com">info@actaba.com</a></p>',["Ada","Nearby communities"], extra='<div class="callout small">Same-day cancellations: call or text (918) 764-8544 by 6:00 a.m.</div>'),
-      row("charlotte","m-charlotte","The Charlotte skyline above leafy Piedmont hills","North Carolina","Charlotte","In-home ABA for families in and around Charlotte. Sessions happen in your home and out in your community, with a BCBA who reviews your child’s progress every week — the same way we work in Colorado and Oklahoma.","In-home and community",nc,["Charlotte","Mecklenburg County","Nearby communities"]),
-      row("thomasville","m-thomasville","Thomasville’s Big Chair among rolling North Carolina hills","North Carolina","Thomasville","In-home ABA for families in and around Thomasville and the Triad. Sessions happen in your home and community, where the skills need to work, with the same BCBA supervision we use everywhere else.","In-home and community",nc,["Thomasville","Davidson County","Nearby communities"]),
+      row("charlotte","m-charlotte","The Charlotte skyline above leafy Piedmont hills","North Carolina","Charlotte","In-home ABA for families in and around Charlotte. Sessions happen in your home and out in your community, with a Board Certified Behavior Analyst who reviews your child’s progress every week — the same way we work in Colorado and Oklahoma.","In-home and community",nc,["Charlotte","Mecklenburg County","Nearby communities"]),
+      row("thomasville","m-thomasville","Thomasville’s Big Chair among rolling North Carolina hills","North Carolina","Thomasville","In-home ABA for families in and around Thomasville and the Triad. Sessions happen in your home and community, where the skills need to work, with the same Board Certified Behavior Analyst supervision we use everywhere else.","In-home and community",nc,["Thomasville","Davidson County","Nearby communities"]),
     ])
     note = '<div class="note" style="max-width:62ch">In <strong>Colorado</strong>, ABA can begin with a letter from your child’s physician recommending it — no autism diagnosis required. In <strong>Oklahoma</strong> and <strong>North Carolina</strong>, a diagnostic evaluation needs to be on file first.</div>'
     return f'''<div data-route="locations" data-title="Locations | Adventure Child Therapy" hidden>
@@ -321,7 +321,7 @@ def about():
     <p class="muted">Because that’s what this is. Growing through behavioral challenges comes with highs, lows and unexpected turns, and families rarely get to choose when the journey starts. Our job is to be the guide who’s walked this trail before — cheering for the wins that might look small from the outside, and staying right beside you when a month is hard.</p>
     <p class="muted">Staying small is a choice, not a phase we’re trying to outgrow. It’s what lets the clinician who assessed your child still know their name, and their favorite toy, a year later.</p>
     <h2 style="margin-top:18px">What makes us different</h2>
-    {ticks(["<strong>Clinician-led.</strong> Clinical decisions are made by the BCBA on your child’s case, not by a scheduling target.","<strong>Progress you can see.</strong> Data from every session is recorded as it happens and reviewed by the supervising BCBA between sessions.","<strong>An admin team that handles the paperwork.</strong> Authorizations, scheduling and claims are our job, not yours.","<strong>Fun is part of the plan.</strong> Kids learn best when they want to be there, so we build sessions your child looks forward to.","<strong>Spanish-language materials and staff.</strong> Our caregiver handbook and intake paperwork are available in Spanish."])}
+    {ticks(["<strong>Clinician-led.</strong> Clinical decisions are made by the Board Certified Behavior Analyst on your child’s case, not by a scheduling target.","<strong>Progress you can see.</strong> Data from every session is recorded as it happens and reviewed by the supervising Board Certified Behavior Analyst between sessions.","<strong>An admin team that handles the paperwork.</strong> Authorizations, scheduling and claims are our job, not yours.","<strong>Fun is part of the plan.</strong> Kids learn best when they want to be there, so we build sessions your child looks forward to.","<strong>Spanish-language materials and staff.</strong> Our caregiver handbook and intake paperwork are available in Spanish."])}
   </div>
   <div class="stack g20">
     <div class="card tint-sun stack g14"><span class="k">Our clinical values</span>{vals}</div>
@@ -336,7 +336,7 @@ def about():
 <section class="sec"><div class="wrap stack g28">
   {head("Behind the scenes", "The systems that make sure nothing gets lost")}
   <div class="grid c3">
-    <div class="card">{ico("i-star")}<h4>Session data, captured live</h4><p class="small muted">Data is recorded during the session, not pieced together from memory afterward, and your BCBA reviews it between sessions.</p></div>
+    <div class="card">{ico("i-star")}<h4>Session data, captured live</h4><p class="small muted">Data is recorded during the session, not pieced together from memory afterward, and your Board Certified Behavior Analyst reviews it between sessions.</p></div>
     <div class="card">{ico("i-letter")}<h4>Documentation and oversight</h4><p class="small muted">Notes, treatment plans and supervision records live in HIPAA-compliant clinical software, not in someone’s inbox.</p></div>
     <div class="card">{ico("i-shield")}<h4>Scheduling, authorizations and billing</h4><p class="small muted">Coverage, prior authorizations and claims run through secure systems our admin team watches closely, so lapses get caught before they interrupt therapy.</p></div>
   </div>
