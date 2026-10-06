@@ -54,7 +54,7 @@ PAGES = [
    re.sub('<[^>]+>', '', g["card"]), "families") for g in p_guide.GUIDES
 ] + [
   ("learn", "/learn/", p_learnpages.learn_hub, "Family micro-course | Adventure Child Therapy",
-   "Five one-minute videos for families starting ABA with Adventure Child Therapy: what ABA is, how it works, a typical session, the assessment, and your part.", "families"),
+   "Six one-minute videos for families starting ABA with Adventure Child Therapy: what ABA is, how it works, a typical session, the assessment, how many hours, and your part.", "families"),
 ] + [
   (f"learn-{L['n']}", f"/learn/{L['n']}/", (lambda n: lambda: p_learnpages.watch_page(n))(L["n"]),
    f"Lesson {L['n']}: {L['title']} | ACT family micro-course", L["blurb"], "families") for L in p_learn.LESSONS
