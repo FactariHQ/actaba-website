@@ -98,3 +98,5 @@ async def guide_pdfs():
 if __name__ == "__main__":
     asyncio.run(main())
     asyncio.run(guide_pdfs())
+    import render_videos
+    render_videos.build_media()
