@@ -19,7 +19,7 @@ LEARN_CSS = """
 .llist img{width:64px;height:86px;object-fit:cover;border-radius:12px;background:#DDF0FA}
 .llist b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.08rem;line-height:1.15}
 .llist span{font-size:.9rem;color:var(--ink-3)}
-.lgrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+.lgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;max-width:980px}
 .lcard{text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:10px}
 .lcard img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:20px;background:#DDF0FA;box-shadow:0 6px 0 var(--line)}
 .lcard b{font-family:var(--f-display);font-weight:800;font-size:1.12rem;line-height:1.15}
@@ -32,17 +32,17 @@ def watch_page(n):
     L = lesson(n)
     nxt = lesson(n + 1) if n < len(LESSONS) else None
     items = "".join(f'''<li><a href="/learn/{x["n"]}/"{' aria-current="page"' if x["n"] == n else ""}><img src="/learn/media/lesson-{x["n"]}.jpg" alt="" loading="lazy"><div><b>{x["n"]}. {x["title"]}</b><span>About a minute</span></div></a></li>''' for x in LESSONS)
-    nxt_html = (f'<a class="card lnext" href="/learn/{nxt["n"]}/" style="text-decoration:none;color:inherit;gap:6px"><span class="k">Up next · Lesson {nxt["n"]} of 5</span><h3>{nxt["title"]}</h3><p class="small muted">{nxt["blurb"]}</p><span class="go">Watch lesson {nxt["n"]} {ARROW}</span></a>'
-                if nxt else f'<div class="card lnext stack g10"><span class="k">You finished all five!</span><h3>Questions? We’re one call away.</h3><p class="small muted">Colorado {CO_TEL} · <a href="mailto:info@actaba.com">info@actaba.com</a></p></div>')
+    nxt_html = (f'<a class="card lnext" href="/learn/{nxt["n"]}/" style="text-decoration:none;color:inherit;gap:6px"><span class="k">Up next · Lesson {nxt["n"]} of {len(LESSONS)}</span><h3>{nxt["title"]}</h3><p class="small muted">{nxt["blurb"]}</p><span class="go">Watch lesson {nxt["n"]} {ARROW}</span></a>'
+                if nxt else f'<div class="card lnext stack g10"><span class="k">You finished all {len(LESSONS)}!</span><h3>Questions? We’re one call away.</h3><p class="small muted">Colorado {CO_TEL} · <a href="mailto:info@actaba.com">info@actaba.com</a></p></div>')
     return f'''<section class="sec tight"><div class="wrap lwrap">
   <div class="lvid"><video controls playsinline preload="metadata" poster="/learn/media/lesson-{n}.jpg" src="/learn/media/lesson-{n}.mp4">
     <track kind="captions" srclang="en" label="English" src="/learn/media/lesson-{n}.vtt">
     Your browser can’t play this video. <a href="/learn/media/lesson-{n}.mp4">Download it here</a>.</video></div>
   <div class="stack g20">
-    <div class="stack g10"><span class="hand">Family micro-course · Lesson {n} of 5</span><h1 style="font-size:clamp(2.1rem,4vw,3rem)">{L["title"]}</h1><p class="lede measure">{L["blurb"]}</p>
+    <div class="stack g10"><span class="hand">Family micro-course · Lesson {n} of {len(LESSONS)}</span><h1 style="font-size:clamp(2.1rem,4vw,3rem)">{L["title"]}</h1><p class="lede measure">{L["blurb"]}</p>
       <p class="small muted">About a minute, with captions. Prefer to read? <a href="{L["guide"]}">Read the full guide</a>.</p></div>
     {nxt_html}
-    <div class="stack g10"><span class="k">All five lessons</span><ol class="llist">{items}</ol></div>
+    <div class="stack g10"><span class="k">All {len(LESSONS)} lessons</span><ol class="llist">{items}</ol></div>
   </div>
 </div></section>'''
 
@@ -52,7 +52,7 @@ def learn_hub():
     return f'''<section class="phead">
   <div class="hero-sky" aria-hidden="true"><svg class="sun" viewBox="0 0 200 200" focusable="false"><use href="#sunsym"/></svg></div>
   <div class="wrap stack g14"><span class="hand">Family micro-course</span><h1>Getting ready for ABA, one minute at a time</h1>
-  <p class="lede measure">Five short videos for families starting with Adventure Child Therapy. Each one takes about a minute and has captions, so you can watch with the sound off.</p>
+  <p class="lede measure">Six short videos for families starting with Adventure Child Therapy. Each one takes about a minute and has captions, so you can watch with the sound off.</p>
   <div class="cta-row">{btn("/learn/1/", "Start with lesson 1")}<a class="go" href="/guide/">Prefer to read? The family guide {ARROW}</a></div></div>
   {strip()}
 </section>
