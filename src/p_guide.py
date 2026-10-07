@@ -23,42 +23,42 @@ PHONES = f"Colorado {CO_TEL} · Oklahoma {OK_TEL} · North Carolina {NC_TEL}"
 
 GUIDES = [
 # ---------------------------------------------------------------- 1
-{"slug": "what-is-aba", "n": 1, "nav": "What is ABA?", "read": "3-minute read", "icon": "i-seed", "tint": "tint-meadow",
- "title": "What is ABA?",
- "card": "The science in plain words, what it can help with, and what good ABA should feel like for your child.",
+{"slug": "what-is-aba", "n": 1, "nav": "What is applied behavior analysis?", "read": "3-minute read", "icon": "i-seed", "tint": "tint-meadow",
+ "title": "What is applied behavior analysis?",
+ "card": "The science in plain words, what it can help with, and what good applied behavior analysis should feel like for your child.",
  "lede": "You don’t need to know any of this before you start — your team will explain things as you go. But if you’re the kind of parent who likes to understand what you’re signing up for, this is for you.",
  "short": [
-   "ABA (applied behavior analysis) is a way of teaching that looks closely at what helps your child learn — and what gets in the way.",
+   "Applied behavior analysis is the science of how learning works. We look at what happens around your child — right before and right after a behavior — and use it to teach new skills that make everyday life easier.",
    "Big skills get broken into small, doable steps, practiced mostly through play and everyday routines.",
    "We measure progress every session, so you can see what’s working — and we change what isn’t.",
  ],
  "sections": [
   {"id": "idea", "hand": "The idea in one minute", "title": "Before, during, after",
-   "intro": "ABA looks at three simple things: what happens right <em>before</em> a behavior, the behavior itself, and what happens right <em>after</em>. Small changes to the before and after can change what happens next time.",
+   "intro": "Applied behavior analysis looks at three simple things: what happens right <em>before</em> a behavior, the behavior itself, and what happens right <em>after</em>. Small changes to the before and after can change what happens next time.",
    "blocks": [
      ("cards", [
-       ("An example", "Snack time is hard", "Your child screams when they want crackers. Screaming works — eventually, the crackers arrive. So screaming keeps happening.", "tint-coral", "i-talk"),
+       ("An example", "Snack time is hard", "Your child screams for crackers, and eventually the crackers arrive. That’s what any loving parent would do — nobody did anything wrong. But because screaming works, it keeps happening.", "tint-coral", "i-talk"),
        ("What we do", "Teach a faster, easier way", "We teach a quicker way to ask — a word, a sign, a picture or a device — and make sure it works <em>better</em> than screaming ever did.", "tint-sky", "i-blocks"),
        ("What changes", "Asking replaces screaming", "Over time, asking becomes the easy choice. Nobody had to punish anything; your child just learned something that works better.", "tint-meadow", "i-seed"),
      ]),
-     ("p", "That’s ABA in a nutshell. The same idea is used to teach talking, playing, getting dressed, using the toilet, waiting, joining a game with other kids — and to make hard moments less frequent and less intense."),
+     ("p", "That’s applied behavior analysis in a nutshell. The same idea is used to teach talking, playing, getting dressed, using the toilet, waiting, joining a game with other kids — and to make hard moments less frequent and less intense."),
    ]},
   {"id": "help", "hand": "What it can help with", "title": "The skills a program can work on", "band": "b-sky",
    "intro": "Every child’s plan is different. Goals come from the assessment and from what matters most to your family. Programs often include:",
    "blocks": [
      ("pills", ["Communication — asking, saying no, being understood", "Play and getting along with other kids", "Imitation and attention", "Getting dressed, brushing teeth, bedtime", "Toilet training", "Mealtimes and trying new foods", "Waiting and handling transitions", "Safety — wandering, roads, water", "Big feelings and challenging behavior", "Getting ready for daycare or school"]),
-     ("p", "The research behind ABA is strongest for autism, and the same principles help children with other developmental differences too."),
+     ("p", "The research behind applied behavior analysis is strongest for autism, and the same principles help children with other developmental differences too."),
    ]},
-  {"id": "good", "hand": "What good ABA looks like", "title": "What you should see — and what you never should",
+  {"id": "good", "hand": "What good applied behavior analysis looks like", "title": "What you should see — and what you never should",
    "blocks": [
      ("cards", [
-       ("You should see", "Play and motivation first", "Learning built around what your child loves. A lot of good ABA looks like play — that’s on purpose.", "tint-sun", "i-blocks"),
+       ("You should see", "Play and motivation first", "Learning built around what your child loves. A lot of good applied behavior analysis looks like play — that’s on purpose.", "tint-sun", "i-blocks"),
        ("You should see", "Communication over compliance", "A child who can ask, say no, and be understood is the point. Sitting still and following orders is not.", "tint-sky", "i-talk"),
        ("You should see", "Your priorities in the plan", "You read and agree to the goals before anything is final. If a goal doesn’t matter to your family, it comes out.", "tint-meadow", "i-home"),
        ("You should see", "Data you can actually read", "Progress you can see for yourself, in plain language — including the wobbly weeks.", "tint-lilac", "i-star"),
      ]),
      ("x", [
-       "We’ll never tell you ABA cures autism. It doesn’t, and that isn’t the goal.",
+       "We’ll never tell you applied behavior analysis cures autism. It doesn’t, and that isn’t the goal.",
        "We’ll never tell you more hours are automatically better. Hours come from the assessment and your child’s needs.",
        "We’ll never tell you progress is a straight line. It isn’t, and we’ll show you the hard weeks too.",
      ]),
@@ -66,8 +66,8 @@ GUIDES = [
   {"id": "team", "hand": "Who’s who", "title": "The people on your child’s team", "band": "b-meadow",
    "blocks": [
      ("cards", [
-       ("The planner", "BCBA", "A Board Certified Behavior Analyst assesses your child, writes the plan, trains the technician, checks the data and coaches you. This is your go-to person for questions.", "", "i-assess"),
-       ("The day-to-day", "Behavior technician (RBT)", "Works one-on-one with your child during sessions, follows the BCBA’s plan, and records data as they go. Certified — or actively earning the RBT credential with our support.", "", "i-blocks"),
+       ("The planner", "Board Certified Behavior Analyst", "Assesses your child, writes the plan, trains the technician, checks the data and coaches you. This is your go-to person for questions.", "", "i-assess"),
+       ("The day-to-day", "Behavior technician (RBT)", "Works one-on-one with your child during sessions, follows the Board Certified Behavior Analyst’s plan, and records data as they go. Certified — or actively earning the RBT credential with our support.", "", "i-blocks"),
        ("The expert on your child", "You", "Nobody knows your child better. You help choose the goals, and you’re the one who helps new skills keep working when we’re not there.", "", "i-heart"),
      ]),
      ("p", "We’re also happy to coordinate with your child’s pediatrician, speech or occupational therapist, daycare or school team — with your permission."),
@@ -76,9 +76,9 @@ GUIDES = [
    "blocks": [
      ("faq", [
        ("Will my child be made to sit at a table for hours?", "No. Some practice happens at a table, in short bursts, with plenty of breaks — but most learning happens through play and everyday routines, wherever the skill needs to work."),
-       ("Will ABA change who my child is?", "It shouldn’t, and if it ever feels that way, please tell us. The goal is a bigger life for your child — more ways to communicate, play, and take part in things they enjoy — not a different child."),
-       ("Is it okay that I have doubts about ABA?", "Completely. Ask us anything, including the hard questions. You can always ask what a goal is for, why we chose a strategy, and what the data says."),
-       ("Is ABA only for autism?", "No. The research is strongest for autism, but the same principles help children with other developmental differences. In Colorado, your child doesn’t need an autism diagnosis to begin."),
+       ("Will applied behavior analysis change who my child is?", "It shouldn’t, and if it ever feels that way, please tell us. The goal is a bigger life for your child — more ways to communicate, play, and take part in things they enjoy — not a different child."),
+       ("Is it okay that I have doubts about applied behavior analysis?", "Completely. Ask us anything, including the hard questions. You can always ask what a goal is for, why we chose a strategy, and what the data says."),
+       ("Is applied behavior analysis only for autism?", "No. The research is strongest for autism, but the same principles help children with other developmental differences. In Colorado, your child doesn’t need an autism diagnosis to begin."),
      ]),
    ]},
  ]},
@@ -89,7 +89,8 @@ GUIDES = [
  "lede": "There are a few steps between “we called” and “therapy started.” You don’t have to manage any of them alone — our team handles the paperwork with you and tells you what’s next at every stop.",
  "short": [
    "There are five stops: intake call, paperwork, insurance approval, assessment, and then sessions begin.",
-   "Your BCBA reviews progress constantly and updates the plan — usually with a formal reassessment about every six months.",
+   "Plan on keeping at least 10 hours a week open for sessions. Your exact hours come from the assessment.",
+   "Your Board Certified Behavior Analyst reviews progress constantly and updates the plan — usually with a formal reassessment about every six months.",
    "The goal is for your family to need us <em>less</em> over time, not more.",
  ],
  "sections": [
@@ -99,27 +100,34 @@ GUIDES = [
        ("About 10 minutes", "Intake call or form", "We ask about your child, your insurance, and the days and times that realistically work. We won’t guess at a start date — as soon as we know, you’ll know."),
        ("Depends on your state", "Gather what’s needed on file", "<strong>Colorado:</strong> no autism diagnosis needed — a letter from your child’s physician recommending ABA is enough. <strong>Oklahoma and North Carolina:</strong> a diagnostic evaluation needs to be on file. No paperwork yet? We’ll share our referral list and hold on to your information so you never start over."),
        ("Days to weeks", "Insurance check and approval", "We verify your benefits and ask your insurer to approve the assessment. With Medicaid, authorized services cost your family nothing. With a commercial plan, we tell you exactly what the plan said — no made-up numbers."),
-       ("Usually 2–4 visits", "Assessment", "A BCBA gets to know your child and you, then writes the treatment plan. You read the goals before anything is final. (Guide 4 walks through this.)"),
+       ("Usually 2–4 visits", "Assessment", "A Board Certified Behavior Analyst gets to know your child and you, then writes the treatment plan. You read the goals before anything is final. (Guide 4 walks through this.)"),
        ("Ongoing", "Sessions begin", "We match your technician on availability, location and continuity — the same friendly face at the same times whenever we can. Family guidance goes on the calendar from day one."),
      ]),
      ("note", "<strong>Waiting is the hardest part.</strong> Timelines depend on your insurer, your area and staffing near you. We won’t give you a date we can’t stand behind — but we will keep you updated, and you can always call to ask where things are."),
    ]},
-  {"id": "hours", "hand": "How hours are decided", "title": "Where the number of hours comes from", "band": "b-sky",
-   "intro": "The number of therapy hours isn’t picked on the phone. The BCBA who assessed your child recommends hours based on your child’s needs, goals and daily life — including school, daycare and family time — and your insurer approves them.",
+  {"id": "hours", "hand": "How many hours?", "title": "How many hours a week ABA takes", "band": "b-sky",
+   "intro": "We ask families to keep <strong>at least 10 hours a week</strong> open for sessions — enough time for new skills to really take hold. Your exact number comes from the assessment: the Board Certified Behavior Analyst who assessed your child recommends hours based on your child’s needs, goals and daily life — including school, daycare and family time — and your insurer approves them.",
    "blocks": [
      ("cards", [
-       ("Often", "Focused programs", "Fewer hours a week, aimed at a handful of specific goals — like toilet training, mealtimes or a particular challenging behavior.", "", "i-star"),
-       ("Sometimes", "Comprehensive programs", "More hours a week across many areas of development, usually for younger children who need support in lots of areas at once.", "", "i-blocks"),
+       ("About 10–15 hours a week", "Focused programs", "Aimed at a handful of specific goals — like toilet training, mealtimes or a particular challenging behavior.", "", "i-star"),
+       ("About 15–25 hours a week", "Broader programs", "Several areas of development at once, built around school or daycare.", "", "i-seed"),
+       ("25 hours a week or more", "Comprehensive programs", "Support across many areas, usually for younger children who need help in lots of areas at once.", "", "i-blocks"),
      ]),
-     ("p", "If the recommended hours don’t fit your family’s life, say so. The plan has to work in the real world — that’s one of our core values."),
+     ("ticks", [
+       "<strong>Sessions come in weekday blocks</strong> — mornings (8–12), afternoons (12–3) or after school (3–6) — scheduled around your family’s week.",
+       "<strong>Family guidance is extra time on your calendar:</strong> at least 2 hours a month with your Board Certified Behavior Analyst.",
+       "<strong>For in-home sessions,</strong> a parent or another trusted adult needs to be home.",
+       "<strong>Hours aren’t forever.</strong> As skills grow, hours usually come down, and we plan that step-down with you.",
+     ]),
+     ("p", "If the recommended hours don’t fit your family’s life, say so. The plan has to work in the real world — that’s one of our core values. Prefer to watch? <a href=\"/learn/5/\">The 1-minute video on hours</a>."),
    ]},
   {"id": "progress", "hand": "How progress is tracked", "title": "You’ll be able to see it, not just hear about it",
    "blocks": [
      ("split", [
        ("ticks", [
          "<strong>Every session:</strong> the technician records data as they go — what your child did independently, what needed help, and what happened around any hard moments.",
-         "<strong>Between sessions:</strong> your BCBA reviews the data. If a program isn’t moving, it changes in weeks, not months.",
-         "<strong>During family guidance:</strong> your BCBA walks you through progress in plain language. Ask to see the graphs any time.",
+         "<strong>Between sessions:</strong> your Board Certified Behavior Analyst reviews the data. If a program isn’t moving, it changes in weeks, not months.",
+         "<strong>During family guidance:</strong> your Board Certified Behavior Analyst walks you through progress in plain language. Ask to see the graphs any time.",
          "<strong>About every six months:</strong> a reassessment updates goals and the hours request, and your insurer reviews it again.",
        ]),
        ("chart", None),
@@ -143,7 +151,7 @@ GUIDES = [
  "short": [
    "The first few weeks are mostly about building trust between your child and their technician. That’s on purpose.",
    "Sessions mix play, short bursts of practice, breaks and everyday routines — wherever the skill needs to work.",
-   "The technician collects data throughout the session and updates your child’s record. Your BCBA visits regularly to supervise and adjust.",
+   "The technician collects data throughout the session and updates your child’s record. Your Board Certified Behavior Analyst visits regularly to supervise and adjust.",
  ],
  "sections": [
   {"id": "first-weeks", "hand": "The first few weeks", "title": "First, we build trust",
@@ -160,16 +168,16 @@ GUIDES = [
        ("Learning", "Teaching woven into play", "Most teaching happens inside activities your child enjoys — asking for a turn, naming the toy, taking turns, following a direction during a game."),
        ("Practice", "Short, focused bursts", "Quick rounds of practice on specific skills, with lots of encouragement and a break or favorite activity right after."),
        ("Routines", "Real-life skills", "Practice on whatever matters at your house: washing hands, snack time, getting shoes on, waiting, cleaning up, moving from one activity to the next."),
-       ("Wrap-up", "Data and notes", "Before leaving, the technician finishes collecting the session’s data and updates your child’s record, so your BCBA can see exactly how it went."),
+       ("Wrap-up", "Data and notes", "Before leaving, the technician finishes collecting the session’s data and updates your child’s record, so your Board Certified Behavior Analyst can see exactly how it went."),
      ]),
    ]},
   {"id": "see", "hand": "What you might notice", "title": "Things that can look odd at first — and why we do them",
    "blocks": [
      ("cards", [
        ("You might see", "Lots of praise and rewards", "Rewards help new skills take hold. As a skill becomes easy, rewards fade to the everyday kind — a smile, a high five, getting what you asked for.", "tint-sun", "i-star"),
-       ("You might see", "The technician writing or tapping", "That’s live data. It’s how your BCBA knows what’s working without guessing.", "tint-sky", "i-assess"),
+       ("You might see", "The technician writing or tapping", "That’s live data. It’s how your Board Certified Behavior Analyst knows what’s working without guessing.", "tint-sky", "i-assess"),
        ("You might see", "Help that slowly disappears", "At first the technician might guide your child’s hand or say the first sound of a word. That help fades on purpose, until your child does it on their own.", "tint-meadow", "i-hand"),
-       ("You might see", "A calm, planned response to hard moments", "If your child has a big reaction, the technician follows the behavior plan your BCBA has already talked through with you. You’ll never be surprised by a strategy.", "tint-coral", "i-heart"),
+       ("You might see", "A calm, planned response to hard moments", "If your child has a big reaction, the technician follows the behavior plan your Board Certified Behavior Analyst has already talked through with you. You’ll never be surprised by a strategy.", "tint-coral", "i-heart"),
      ]),
    ]},
   {"id": "you", "hand": "Where you fit in", "title": "Your part during a session", "band": "b-meadow",
@@ -182,7 +190,7 @@ GUIDES = [
          "<strong>Share the small stuff.</strong> A rough night, a new medicine, a family change — it all helps us read the day.",
        ]),
        ("cards", [
-         ("Your BCBA’s visits", "Supervision, built in", "Your BCBA regularly joins sessions to watch, coach the technician, update programs and answer your questions. Save your questions — that’s a great time to ask.", "", "i-assess"),
+         ("Your Board Certified Behavior Analyst’s visits", "Supervision, built in", "Your Board Certified Behavior Analyst regularly joins sessions to watch, coach the technician, update programs and answer your questions. Save your questions — that’s a great time to ask.", "", "i-assess"),
        ]),
      ]),
      ("p", "At our Tulsa center, sessions happen in our playrooms, and the team will walk you through drop-off and pick-up. In daycare or community settings, we coordinate with the staff there."),
@@ -192,15 +200,15 @@ GUIDES = [
 {"slug": "the-assessment", "n": 4, "nav": "The assessment", "read": "4-minute read", "icon": "i-assess", "tint": "tint-coral",
  "title": "The assessment: what to expect",
  "card": "What to have ready, what happens during the visits, and how the treatment plan gets made.",
- "lede": "The assessment isn’t a test your child can pass or fail. It’s how your BCBA gets to know your child — and your family — well enough to write a plan that actually fits.",
+ "lede": "The assessment isn’t a test your child can pass or fail. It’s how your Board Certified Behavior Analyst gets to know your child — and your family — well enough to write a plan that actually fits.",
  "short": [
-   "It usually takes 2–4 visits with a BCBA, at home or wherever therapy will happen.",
+   "It usually takes 2–4 visits with a Board Certified Behavior Analyst, at home or wherever therapy will happen.",
    "Your child doesn’t need to “perform.” A normal day — even a hard one — tells us the most.",
    "You’ll read the goals and the plan before anything is sent to your insurer.",
  ],
  "sections": [
   {"id": "before", "hand": "Before the first visit", "title": "Helpful to have ready (but don’t stress)",
-   "intro": "Pull together whatever you have. If you don’t have something, that’s fine — your BCBA will work with what’s there.",
+   "intro": "Pull together whatever you have. If you don’t have something, that’s fine — your Board Certified Behavior Analyst will work with what’s there.",
    "blocks": [
      ("split", [
        ("ticks", [
@@ -220,11 +228,11 @@ GUIDES = [
   {"id": "during", "hand": "During the visits", "title": "What actually happens", "band": "b-sky",
    "blocks": [
      ("steps", [
-       ("Talking with you", "Caregiver interview", "Your BCBA asks about your child’s history, what a typical day looks like, what’s going well, what’s hard, and what matters most to you. This is the most important part — you’re the expert on your child."),
-       ("Watching and playing", "Observation", "Your BCBA watches your child play and go through normal routines, and plays with them too. No preparation needed."),
+       ("Talking with you", "Caregiver interview", "Your Board Certified Behavior Analyst asks about your child’s history, what a typical day looks like, what’s going well, what’s hard, and what matters most to you. This is the most important part — you’re the expert on your child."),
+       ("Watching and playing", "Observation", "Your Board Certified Behavior Analyst watches your child play and go through normal routines, and plays with them too. No preparation needed."),
        ("Skills check", "Structured skills assessment", "Play-based activities that check communication, play, self-help, social and learning skills. We often use tools like the ABLLS-R or VB-MAPP."),
-       ("Everyday skills", "Adaptive questionnaire", "A standardized set of questions about everyday skills — like the Vineland-3 — that you answer with your BCBA’s help."),
-       ("If needed", "A closer look at hard behavior", "If challenging behavior is a concern, your BCBA looks at when it happens, what comes before and after, and what it might be doing for your child. That’s how we find a kinder, more effective way to help."),
+       ("Everyday skills", "Adaptive questionnaire", "A standardized set of questions about everyday skills — like the Vineland-3 — that you answer with your Board Certified Behavior Analyst’s help."),
+       ("If needed", "A closer look at hard behavior", "If challenging behavior is a concern, your Board Certified Behavior Analyst looks at when it happens, what comes before and after, and what it might be doing for your child. That’s how we find a kinder, more effective way to help."),
      ]),
    ]},
   {"id": "tips", "hand": "A few tips", "title": "To get the most out of it",
@@ -232,14 +240,14 @@ GUIDES = [
      ("cards", [
        ("Honestly", "A hard day is useful", "If your child melts down during the assessment, don’t apologize. It shows us exactly what we need to help with.", "tint-sun", "i-heart"),
        ("Really", "No need to tidy up", "Your normal routines and your normal house are the most helpful thing to see.", "tint-meadow", "i-home"),
-       ("Please", "Say what matters to you", "If something your BCBA suggests doesn’t fit your family, your culture or your priorities, say so. The goals are yours too.", "tint-sky", "i-talk"),
+       ("Please", "Say what matters to you", "If something your Board Certified Behavior Analyst suggests doesn’t fit your family, your culture or your priorities, say so. The goals are yours too.", "tint-sky", "i-talk"),
      ]),
    ]},
   {"id": "after", "hand": "After the visits", "title": "From assessment to approved plan", "band": "b-meadow",
    "blocks": [
      ("steps", [
-       ("Writing", "Your BCBA writes the plan", "It includes your child’s goals, how each will be taught, how hard moments will be handled, goals for family guidance, and the recommended hours."),
-       ("Reviewing", "You read it together", "Your BCBA walks you through the plan in plain language. Ask questions, change what doesn’t fit, and sign when you’re comfortable."),
+       ("Writing", "Your Board Certified Behavior Analyst writes the plan", "It includes your child’s goals, how each will be taught, how hard moments will be handled, goals for family guidance, and the recommended hours."),
+       ("Reviewing", "You read it together", "Your Board Certified Behavior Analyst walks you through the plan in plain language. Ask questions, change what doesn’t fit, and sign when you’re comfortable."),
        ("Approving", "We send it to your insurer", "We submit the plan and hours request for approval. This can take days to a few weeks, and we’ll tell you as soon as we hear."),
        ("Starting", "Scheduling and your technician", "Once approved, we set your schedule and introduce your technician."),
      ]),
@@ -252,7 +260,7 @@ GUIDES = [
  "card": "The handful of things that make ABA work, and the promises we make in return.",
  "lede": "You don’t need to be an expert, and you don’t need to do it all at once. ABA works best as a partnership, so here’s what we’ll ask — openly, up front — and what you can expect from us in return.",
  "short": [
-   "An adult at home for in-home sessions, and at least two hours a month of family guidance with your BCBA.",
+   "An adult at home for in-home sessions, and at least two hours a month of family guidance with your Board Certified Behavior Analyst.",
    "A steady schedule — and a heads-up when plans change.",
    "Keep your insurance current, and talk to us when something isn’t working.",
  ],
@@ -261,7 +269,7 @@ GUIDES = [
    "blocks": [
      ("cards", [
        ("1", "Be home for in-home sessions", "A parent or another trusted adult needs to be in the home during in-home sessions. You can go about your day — just stay nearby and available.", "tint-sun", "i-home"),
-       ("2", "Family guidance: at least two hours a month", "Time with your BCBA, practicing strategies in your real routines — bath time, car seats, the grocery store. It’s required by insurers, and it’s where a lot of the lasting change comes from. Other caregivers are welcome to join.", "tint-meadow", "i-talk"),
+       ("2", "Family guidance: at least two hours a month", "Time with your Board Certified Behavior Analyst, practicing strategies in your real routines — bath time, car seats, the grocery store. It’s required by insurers, and it’s where a lot of the lasting change comes from. Other caregivers are welcome to join.", "tint-meadow", "i-talk"),
        ("3", "Keep the schedule steady", "Consistency is how skills stick. Frequent cancellations can quietly undo months of progress — and insurers look at attendance when they review continued hours.", "tint-sky", "i-blocks"),
        ("4", "Give us a heads-up", "As much notice as you can. <strong>Two weeks</strong> for planned vacations. <strong>Same-day cancellations by 6:00 a.m.</strong>, by call or text. If your child is sick — fever, vomiting, anything contagious — please cancel; we’ll do the same if our staff is sick.", "tint-coral", "i-letter"),
        ("5", "Keep your insurance current", "Tell us the day your insurance changes. Watch your mail for Medicaid renewal paperwork and send it back quickly — a lapse in coverage is the most common reason therapy pauses, and it’s completely preventable.", "tint-lilac", "i-shield"),
@@ -269,7 +277,7 @@ GUIDES = [
      ]),
    ]},
   {"id": "practice", "hand": "In between sessions", "title": "Practice, without the homework feeling", "band": "b-sky",
-   "intro": "Your BCBA will give you one or two things to try at a time — not a binder. Things like:",
+   "intro": "Your Board Certified Behavior Analyst will give you one or two things to try at a time — not a binder. Things like:",
    "blocks": [
      ("ticks", [
        "Waiting a beat before handing over the snack, so your child has a chance to ask.",
@@ -283,7 +291,7 @@ GUIDES = [
      ("ticks", [
        "<strong>The same friendly face whenever we can.</strong> We match technicians for continuity and keep them with your family.",
        "<strong>A heads-up if we need to cancel</strong> — and a real effort to send someone else to cover.",
-       "<strong>A BCBA who answers your questions</strong> and explains things in plain language.",
+       "<strong>A Board Certified Behavior Analyst who answers your questions</strong> and explains things in plain language.",
        "<strong>Goals you agreed to,</strong> and progress data you can see any time.",
        "<strong>Respect for your home, your culture and your language.</strong> Caregiver paperwork is available in Spanish — just ask.",
        "<strong>Honesty</strong> — about cost, timelines, and what ABA can and can’t do.",

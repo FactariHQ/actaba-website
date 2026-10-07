@@ -38,12 +38,18 @@ from p_art import DEFS, HILLS, LOGO
 from render_images import FACES
 
 # ------------------------------------------------------------------ narration
+# Spoken-only fixes (captions keep the written form). Kokoro blurs "Board Certified" into "board's certified";
+# the hyphen makes it say each word clearly (checked by transcribing the audio back with Whisper).
+PRONOUNCE = {"Board Certified": "Board-Certified"}
+
 def tts_beats(lesson):
     from kokoro_onnx import Kokoro
     k = Kokoro(str(TTS_DIR / "kokoro-v1.0.onnx"), str(TTS_DIR / "voices-v1.0.bin"))
     clips = []
     for b in lesson["beats"]:
-        s, sr = k.create(b["say"], voice=VOICE, speed=SPEED, lang="en-us")
+        say = b["say"]
+        for written, spoken in PRONOUNCE.items(): say = say.replace(written, spoken)
+        s, sr = k.create(say, voice=VOICE, speed=SPEED, lang="en-us")
         assert sr == SR, sr
         s = np.asarray(s, dtype=np.float32)
         # trim leading/trailing near-silence so beat timing is tight
@@ -148,6 +154,7 @@ html,body{margin:0;width:540px;height:960px;overflow:hidden;background:#DDF0FA}
 .team{display:grid;grid-template-columns:1fr;gap:12px;margin-top:20px}
 .person{display:flex;gap:14px;align-items:center;border-radius:20px;padding:14px 16px;background:var(--band-sky);opacity:0}
 .person:nth-child(2){background:var(--band-sun)} .person:nth-child(3){background:var(--band-meadow)}
+.person .av svg{width:32px;height:32px}
 .person .av{flex:none;width:50px;height:50px;border-radius:50%;background:#fff;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:15px;color:var(--ink)}
 .person b{display:block;font-family:var(--f-display);font-weight:800;font-size:22px;line-height:1.1}
 .person span{font-size:16px;color:var(--ink-2)}
@@ -194,7 +201,8 @@ def beat_html(v, n_lessons=5):
     if k == "chart":
         return f'<div class="card">{head}<div class="chart">{chart_svg()}</div></div>'
     if k == "team":
-        items = "".join(f'<div class="person anim-i"><span class="av">{esc(a[:4])}</span><div><b>{esc(a)}</b><span>{esc(b)}</span></div></div>' for a, b in v["items"])
+        av = lambda it: f'<svg viewBox="0 0 48 48"><use href="#{it[2]}"/></svg>' if len(it) > 2 else esc(it[0][:4])
+        items = "".join(f'<div class="person anim-i"><span class="av">{av(it)}</span><div><b>{esc(it[0])}</b><span>{esc(it[1])}</span></div></div>' for it in v["items"])
         return f'<div class="card">{head}<div class="team">{items}</div></div>'
     if k == "next":
         return f'<div class="card title-card">{head}<div class="url">actaba.com/learn</div></div>'
@@ -268,7 +276,7 @@ def page(lesson, timeline):
 <svg class="sun" viewBox="0 0 200 200"><use href="#sunsym"/></svg>
 <svg class="cloud" style="left:-30px;top:120px" viewBox="0 0 200 90"><use href="#cloudsym"/></svg>
 <svg class="cloud" style="left:290px;top:560px;width:110px;opacity:.7" viewBox="0 0 200 90"><use href="#cloudsym"/></svg>
-<div class="top">{LOGO.replace('width="42" height="42"', '')}<span class="bn"><span class="b1">Adventure Child Therapy</span><span class="b2">Family micro-course · {lesson["n"]} of 5</span></span></div>
+<div class="top">{LOGO.replace('width="42" height="42"', '')}<span class="bn"><span class="b1">Adventure Child Therapy</span><span class="b2">Family micro-course · {lesson["n"]} of {len(p_learn.LESSONS)}</span></span></div>
 <div class="prog">{bars}</div>
 {beats}
 <div class="cap"><div></div></div>
