@@ -23,42 +23,42 @@ PHONES = f"Colorado {CO_TEL} · Oklahoma {OK_TEL} · North Carolina {NC_TEL}"
 
 GUIDES = [
 # ---------------------------------------------------------------- 1
-{"slug": "what-is-aba", "n": 1, "nav": "What is ABA?", "read": "3-minute read", "icon": "i-seed", "tint": "tint-meadow",
- "title": "What is ABA?",
- "card": "The science in plain words, what it can help with, and what good ABA should feel like for your child.",
+{"slug": "what-is-aba", "n": 1, "nav": "What is applied behavior analysis?", "read": "3-minute read", "icon": "i-seed", "tint": "tint-meadow",
+ "title": "What is applied behavior analysis?",
+ "card": "The science in plain words, what it can help with, and what good applied behavior analysis should feel like for your child.",
  "lede": "You don’t need to know any of this before you start — your team will explain things as you go. But if you’re the kind of parent who likes to understand what you’re signing up for, this is for you.",
  "short": [
-   "ABA (applied behavior analysis) is a way of teaching that looks closely at what helps your child learn — and what gets in the way.",
+   "Applied behavior analysis is the science of how learning works. We look at what happens around your child — right before and right after a behavior — and use it to teach new skills that make everyday life easier.",
    "Big skills get broken into small, doable steps, practiced mostly through play and everyday routines.",
    "We measure progress every session, so you can see what’s working — and we change what isn’t.",
  ],
  "sections": [
   {"id": "idea", "hand": "The idea in one minute", "title": "Before, during, after",
-   "intro": "ABA looks at three simple things: what happens right <em>before</em> a behavior, the behavior itself, and what happens right <em>after</em>. Small changes to the before and after can change what happens next time.",
+   "intro": "Applied behavior analysis looks at three simple things: what happens right <em>before</em> a behavior, the behavior itself, and what happens right <em>after</em>. Small changes to the before and after can change what happens next time.",
    "blocks": [
      ("cards", [
-       ("An example", "Snack time is hard", "Your child screams when they want crackers. Screaming works — eventually, the crackers arrive. So screaming keeps happening.", "tint-coral", "i-talk"),
+       ("An example", "Snack time is hard", "Your child screams for crackers, and eventually the crackers arrive. That’s what any loving parent would do — nobody did anything wrong. But because screaming works, it keeps happening.", "tint-coral", "i-talk"),
        ("What we do", "Teach a faster, easier way", "We teach a quicker way to ask — a word, a sign, a picture or a device — and make sure it works <em>better</em> than screaming ever did.", "tint-sky", "i-blocks"),
        ("What changes", "Asking replaces screaming", "Over time, asking becomes the easy choice. Nobody had to punish anything; your child just learned something that works better.", "tint-meadow", "i-seed"),
      ]),
-     ("p", "That’s ABA in a nutshell. The same idea is used to teach talking, playing, getting dressed, using the toilet, waiting, joining a game with other kids — and to make hard moments less frequent and less intense."),
+     ("p", "That’s applied behavior analysis in a nutshell. The same idea is used to teach talking, playing, getting dressed, using the toilet, waiting, joining a game with other kids — and to make hard moments less frequent and less intense."),
    ]},
   {"id": "help", "hand": "What it can help with", "title": "The skills a program can work on", "band": "b-sky",
    "intro": "Every child’s plan is different. Goals come from the assessment and from what matters most to your family. Programs often include:",
    "blocks": [
      ("pills", ["Communication — asking, saying no, being understood", "Play and getting along with other kids", "Imitation and attention", "Getting dressed, brushing teeth, bedtime", "Toilet training", "Mealtimes and trying new foods", "Waiting and handling transitions", "Safety — wandering, roads, water", "Big feelings and challenging behavior", "Getting ready for daycare or school"]),
-     ("p", "The research behind ABA is strongest for autism, and the same principles help children with other developmental differences too."),
+     ("p", "The research behind applied behavior analysis is strongest for autism, and the same principles help children with other developmental differences too."),
    ]},
-  {"id": "good", "hand": "What good ABA looks like", "title": "What you should see — and what you never should",
+  {"id": "good", "hand": "What good applied behavior analysis looks like", "title": "What you should see — and what you never should",
    "blocks": [
      ("cards", [
-       ("You should see", "Play and motivation first", "Learning built around what your child loves. A lot of good ABA looks like play — that’s on purpose.", "tint-sun", "i-blocks"),
+       ("You should see", "Play and motivation first", "Learning built around what your child loves. A lot of good applied behavior analysis looks like play — that’s on purpose.", "tint-sun", "i-blocks"),
        ("You should see", "Communication over compliance", "A child who can ask, say no, and be understood is the point. Sitting still and following orders is not.", "tint-sky", "i-talk"),
        ("You should see", "Your priorities in the plan", "You read and agree to the goals before anything is final. If a goal doesn’t matter to your family, it comes out.", "tint-meadow", "i-home"),
        ("You should see", "Data you can actually read", "Progress you can see for yourself, in plain language — including the wobbly weeks.", "tint-lilac", "i-star"),
      ]),
      ("x", [
-       "We’ll never tell you ABA cures autism. It doesn’t, and that isn’t the goal.",
+       "We’ll never tell you applied behavior analysis cures autism. It doesn’t, and that isn’t the goal.",
        "We’ll never tell you more hours are automatically better. Hours come from the assessment and your child’s needs.",
        "We’ll never tell you progress is a straight line. It isn’t, and we’ll show you the hard weeks too.",
      ]),
@@ -76,9 +76,9 @@ GUIDES = [
    "blocks": [
      ("faq", [
        ("Will my child be made to sit at a table for hours?", "No. Some practice happens at a table, in short bursts, with plenty of breaks — but most learning happens through play and everyday routines, wherever the skill needs to work."),
-       ("Will ABA change who my child is?", "It shouldn’t, and if it ever feels that way, please tell us. The goal is a bigger life for your child — more ways to communicate, play, and take part in things they enjoy — not a different child."),
-       ("Is it okay that I have doubts about ABA?", "Completely. Ask us anything, including the hard questions. You can always ask what a goal is for, why we chose a strategy, and what the data says."),
-       ("Is ABA only for autism?", "No. The research is strongest for autism, but the same principles help children with other developmental differences. In Colorado, your child doesn’t need an autism diagnosis to begin."),
+       ("Will applied behavior analysis change who my child is?", "It shouldn’t, and if it ever feels that way, please tell us. The goal is a bigger life for your child — more ways to communicate, play, and take part in things they enjoy — not a different child."),
+       ("Is it okay that I have doubts about applied behavior analysis?", "Completely. Ask us anything, including the hard questions. You can always ask what a goal is for, why we chose a strategy, and what the data says."),
+       ("Is applied behavior analysis only for autism?", "No. The research is strongest for autism, but the same principles help children with other developmental differences. In Colorado, your child doesn’t need an autism diagnosis to begin."),
      ]),
    ]},
  ]},
