@@ -85,3 +85,18 @@ Render locally: `python3 render_videos.py --force` (all) or `python3 render_vide
 
 The texting itself runs outside this repo: the "ACT Parent Texts — Colorado" Google Sheet (sequence, families, log) with
 its Apps Script engine, sent daily from the clinic Google Voice line.
+
+## New-hire "Before Day One" modules
+
+`/start/` is an unlisted hub (noindex, not in the sitemap or nav) with six short modules for new behavior technicians to
+read between accepting an offer and their first day: `/start/1/` … `/start/6/` (welcome and team, the first two weeks,
+the RBT head start, and three ABA basics primers). Each ends with a three-question check. All copy lives in `MODULES`
+in `src/p_start.py`; page layout, CSS and the small page script are in `src/p_startpages.py`.
+
+Links arrive by text and email from the **ACT New Hire Drip** engine (Apps Script under josh@actaba.com, control sheet
+"ACT New Hire Drip — Before Day One" in the TechnicianNewHire Drive folder) with a per-hire token (`?h=…`). When a token
+is present, the page pings the engine's public beacon URL (`BEACON` in `p_startpages.py`) on open and on finishing the
+check, so the team can see who opened and finished what. Pages work normally without a token.
+
+Content rules for these pages: no software vendor names, no pay figures, no client details; early sessions are about
+building trust (never "becoming friends").

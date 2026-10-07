@@ -1,5 +1,5 @@
 import re, os, json, shutil, datetime
-import p_shared, p_pages, p_pro, p_guide, p_learn, p_learnpages
+import p_shared, p_pages, p_pro, p_guide, p_learn, p_learnpages, p_start, p_startpages
 from p_css import CSS
 from p_art import DEFS, LOGO
 from p_shared import CO_TEL, OK_TEL, NC_TEL, ARROW
@@ -58,7 +58,15 @@ PAGES = [
 ] + [
   (f"learn-{L['n']}", f"/learn/{L['n']}/", (lambda n: lambda: p_learnpages.watch_page(n))(L["n"]),
    f"Lesson {L['n']}: {L['title']} | ACT family micro-course", L["blurb"], "families") for L in p_learn.LESSONS
+] + [
+  # new-hire Before Day One modules: unlisted (noindex, not in the sitemap or nav)
+  ("start", "/start/", p_startpages.start_hub, "Before Day One | Adventure Child Therapy",
+   "Six short modules for new Adventure Child Therapy behavior technicians to complete before their first day.", ""),
+] + [
+  (f"start-{M['n']}", f"/start/{M['n']}/", (lambda n: lambda: p_startpages.module_page(n))(M["n"]),
+   f"Module {M['n']}: {M['title']} | ACT Before Day One", M["blurb"], "") for M in p_start.MODULES
 ]
+UNLISTED = lambda key: key == "start" or key.startswith("start-")
 # per-page share images (link previews when a lesson is texted)
 OG_IMAGES = {f"/learn/{L['n']}/": (f"/learn/media/lesson-{L['n']}.jpg", 720, 1280) for L in p_learn.LESSONS}
 NAV = [("/","home","Home"),("/families/","families","Families"),("/services/","services","Services"),("/what-is-aba/","aba","What is ABA"),("/locations/","locations","Locations"),("/providers/","providers","Providers"),("/careers/","careers","Careers"),("/about/","about","About"),("/contact/","contact","Contact")]
@@ -292,15 +300,15 @@ def doc(path, title, desc, body_html, active, pro=False, jsonld=None, jotform=Fa
 def build():
     if os.path.exists(OUT): shutil.rmtree(OUT)
     os.makedirs(OUT + "/assets")
-    open(OUT + "/assets/site.css", "w").write(CSS + EXTRA_CSS + p_guide.GUIDE_CSS + p_learnpages.LEARN_CSS)
-    open(OUT + "/assets/site.js", "w").write(JS)
+    open(OUT + "/assets/site.css", "w").write(CSS + EXTRA_CSS + p_guide.GUIDE_CSS + p_learnpages.LEARN_CSS + p_startpages.START_CSS)
+    open(OUT + "/assets/site.js", "w").write(JS + p_startpages.START_JS)
     for key, path, fn, title, desc, active in PAGES:
         body = fix_links(strip_route(fn()))
         assert 'data-route' not in body and ' hidden>' not in body, key
         d = OUT + path
         os.makedirs(d, exist_ok=True)
-        html = doc(path, title, desc, body, active, pro=(key in ("providers", "careers")),
-                   jsonld=JSONLD if key == "home" else None, jotform=(key in ("families", "contact")))
+        html = doc(path, title, desc, body, active, pro=(key in ("providers", "careers") or UNLISTED(key)),
+                   jsonld=JSONLD if key == "home" else None, jotform=(key in ("families", "contact")), noindex=UNLISTED(key))
         open(d + "index.html", "w").write(html)
     # combined printable guide (source for the all-in-one PDF; not linked or indexed)
     os.makedirs(OUT + "/guide/print", exist_ok=True)
@@ -324,7 +332,7 @@ def build():
 <meta http-equiv="refresh" content="0; url={new}"><script>location.replace("{new}")</script></head>
 <body><p>This page has moved. <a href="{new}">Continue to the new page</a>.</p></body></html>''')
     # sitemap, robots, CNAME, nojekyll
-    urls = "".join(f"<url><loc>{SITE}{p}</loc><lastmod>{TODAY}</lastmod><changefreq>monthly</changefreq><priority>{'1.0' if p=='/' else '0.8'}</priority></url>" for _, p, *_ in PAGES)
+    urls = "".join(f"<url><loc>{SITE}{p}</loc><lastmod>{TODAY}</lastmod><changefreq>monthly</changefreq><priority>{'1.0' if p=='/' else '0.8'}</priority></url>" for k, p, *_ in PAGES if not UNLISTED(k))
     open(OUT + "/sitemap.xml", "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
     open(OUT + "/robots.txt", "w").write(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
     open(OUT + "/CNAME", "w").write("actaba.com\n")
