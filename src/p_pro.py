@@ -50,7 +50,7 @@ def providers():
   {sec_head("Coverage", "Service areas and payers")}
   <div class="lead-list">
     <div><h4>Colorado</h4><p class="muted">Denver metro, Grand Junction and Pueblo. In-home and community-based services, including daycare and school settings where the treatment plan calls for it. Billed to Health First Colorado and commercial plans after benefit verification.</p></div>
-    <div><h4>Oklahoma</h4><p class="muted">Tulsa and Tulsa County: center-based services at 1217 East 48th Street, Suite 101, plus in-home services. Ada and nearby communities: in-home services. Billed to SoonerCare, SoonerSelect plans (Aetna Better Health of Oklahoma, Blue Cross and Blue Shield of Oklahoma, Oklahoma Complete Health, Humana Healthy Horizons) and commercial plans after benefit verification.</p></div>
+    <div><h4>Oklahoma</h4><p class="muted">Tulsa and Tulsa County: center-based services at 1217 East 48th Street, Suite 101, plus in-home services. Ada and nearby communities: in-home, school and community services. Billed to SoonerCare, SoonerSelect plans (Aetna Better Health of Oklahoma, Blue Cross and Blue Shield of Oklahoma, Oklahoma Complete Health, Humana Healthy Horizons) and commercial plans after benefit verification.</p></div>
     <div><h4>North Carolina</h4><p class="muted">Charlotte and Thomasville, with nearby communities: in-home and community-based services. Medicaid and commercial plans; we verify each family’s coverage before services start.</p></div>
     <div><h4>Outside these areas</h4><p class="muted">Please refer anyway and note the family’s location. We track unmet demand by ZIP code, and it informs where we open next.</p></div>
   </div>

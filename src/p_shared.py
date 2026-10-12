@@ -57,7 +57,7 @@ FAQ_CORE = [
   ("What will this cost us?",
    "If your child is enrolled in Health First Colorado, SoonerCare or NC Medicaid, there’s no cost to you for authorized services. If you have a commercial plan, we verify your benefits and tell you exactly what the plan said and when we checked. We won’t guess at a number just to have one to say."),
   ("Where do sessions happen?",
-   "In Colorado, almost always in your home — and in daycare, school or community settings when your child’s plan calls for it. In Tulsa, we have a center at 1217 East 48th Street, and we also see families in their homes. Around Ada, sessions happen in your home. In North Carolina, around Charlotte and Thomasville, sessions happen in your home and community."),
+   "In Colorado, almost always in your home — and in daycare, school or community settings when your child’s plan calls for it. In Tulsa, we have a center at 1217 East 48th Street, and we also see families in their homes. Around Ada, sessions happen in your home, at school and out in the community. In North Carolina, around Charlotte and Thomasville, sessions happen in your home and community."),
   ("How many hours will my child get?",
    "That comes from the assessment and the authorization, not from a phone call. Hours are recommended by the Board Certified Behavior Analyst who assessed your child and approved by your plan."),
   ("How long is the wait?",
@@ -145,7 +145,7 @@ LOCS = [
   ("grand-junction", "m-gj", "Colorado", "Grand Junction", "In-home, daycare, school and community", None, "Mesas of the Western Slope"),
   ("pueblo", "m-pueblo", "Colorado", "Pueblo", "In-home and community", None, "A river valley in southern Colorado"),
   ("tulsa", "m-tulsa", "Oklahoma", "Tulsa Center", "Center-based and in-home", "1217 East 48th Street, Suite 101<br>Tulsa, OK 74105", "Our Tulsa center on the prairie"),
-  ("ada", "m-ada", "Oklahoma", "Ada", "In-home", None, "Rolling hills and oak trees around Ada, Oklahoma"),
+  ("ada", "m-ada", "Oklahoma", "Ada", "In-home, school and community", None, "Rolling hills and oak trees around Ada, Oklahoma"),
   ("charlotte", "m-charlotte", "North Carolina", "Charlotte", "In-home and community", None, "The Charlotte skyline above leafy Piedmont hills"),
   ("thomasville", "m-thomasville", "North Carolina", "Thomasville", "In-home and community", None, "Thomasville’s Big Chair among rolling North Carolina hills"),
 ]

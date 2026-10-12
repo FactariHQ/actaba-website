@@ -29,7 +29,7 @@ MODULES = [
     "blurb": "Who we are, what a behavior technician does here, who is on your team, and the five questions we ask ourselves every day.",
     "sections": [
       ("Who we are",
-       "<p>Adventure Child Therapy (ACT) is a small, clinician-led ABA practice. We have been serving kids and families since 2021: in-home across the Denver metro, Grand Junction and Pueblo in Colorado; at our Tulsa center and in homes around Ada in Oklahoma; and in homes and the community around Charlotte and Thomasville in North Carolina.</p>"
+       "<p>Adventure Child Therapy (ACT) is a small, clinician-led ABA practice. We have been serving kids and families since 2021: in-home across the Denver metro, Grand Junction and Pueblo in Colorado; at our Tulsa center and in homes, schools and the community around Ada in Oklahoma; and in homes and the community around Charlotte and Thomasville in North Carolina.</p>"
        "<p>Small is on purpose. It means the people who make decisions know the families, know the technicians, and can fix problems quickly.</p>"),
       ("What a behavior technician does here",
        "<p>You are the person a child sees most. You run one-on-one sessions in the child’s home, community, daycare, school or our center, following a treatment plan written by a Board Certified Behavior Analyst (BCBA). During every session you collect data on how the child is doing, and that data is what the BCBA uses to decide what to change.</p>"

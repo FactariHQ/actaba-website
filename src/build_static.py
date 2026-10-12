@@ -38,7 +38,7 @@ PAGES = [
   ("what-is-aba", "/what-is-aba/", p_pages.aba, "What is ABA? | Adventure Child Therapy",
    "Applied behavior analysis explained in plain language — what the science is, what a session looks like, and what we think is honest to promise.", "aba"),
   ("locations", "/locations/", p_pages.locations, "Locations | Adventure Child Therapy",
-   "In-home ABA across the Denver metro, Grand Junction and Pueblo, Colorado; center-based and in-home ABA in Tulsa, Oklahoma; in-home ABA in Ada, Oklahoma; and in-home ABA in Charlotte and Thomasville, North Carolina.", "locations"),
+   "In-home ABA across the Denver metro, Grand Junction and Pueblo, Colorado; center-based and in-home ABA in Tulsa, Oklahoma; in-home, school and community ABA in Ada, Oklahoma; and in-home ABA in Charlotte and Thomasville, North Carolina.", "locations"),
   ("providers", "/providers/", p_pro.providers, "Referral information for providers | Adventure Child Therapy",
    "For pediatricians, diagnosticians, school teams and case managers: documentation requirements by state, coverage, secure records, and the referral form.", "providers"),
   ("careers", "/careers/", p_pro.careers, "Careers | Adventure Child Therapy",
