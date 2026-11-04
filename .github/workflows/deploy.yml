@@ -28,6 +28,11 @@ jobs:
         working-directory: src
         run: python build_static.py
 
+      - name: Add static pages (src/static/ copied as-is; *.b64 files decoded)
+        run: |
+          cp -R src/static/. src/dist/
+          find src/dist -name '*.b64' -exec sh -c 'base64 -d "$1" > "${1%.b64}" && rm "$1"' _ {} \;
+
       - name: Fetch fonts for the share image
         run: |
           mkdir -p fonts && cd fonts
@@ -43,7 +48,7 @@ jobs:
 
       - name: Check the build
         run: |
-          for p in index.html families/index.html services/index.html what-is-aba/index.html locations/index.html providers/index.html careers/index.html about/index.html contact/index.html 404.html CNAME og-image.png apple-touch-icon.png; do
+          for p in index.html families/index.html services/index.html what-is-aba/index.html locations/index.html providers/index.html careers/index.html about/index.html contact/index.html 404.html CNAME og-image.png apple-touch-icon.png labors/index.html labors/icon-180.png; do
             test -s "src/dist/$p" || { echo "missing $p"; exit 1; }
           done
 
